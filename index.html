@@ -2,839 +2,2297 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rafael Ávila Janz — ESG & Sustainability Innovation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Rafael Ávila Janz · ESG & Sustainability Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --g:#1B5E3B;--gm:#2D8653;--gl:#D6EFE0;--gp:#F3FAF6;
-  --dark:#0D1117;--mid:#374151;--muted:#9CA3AF;--rule:#E5E7EB;
-  --bg:#FAFAF8;--white:#fff;
-  --serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--mid);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+body{background:#E8DDC9;font-family:'DM Sans',system-ui,sans-serif;color:#3D352A;min-height:100vh}
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:58px;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,250,248,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
-.nav-name{font-family:var(--serif);font-size:1.05rem;color:var(--dark)}
-.nav-links{display:flex;gap:1.75rem;list-style:none}
-.nav-links a{font-size:.82rem;color:var(--muted);text-decoration:none;letter-spacing:.04em;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--g)}
-.nav-cta{font-size:.82rem;font-weight:500;color:var(--g);text-decoration:none;border:1px solid var(--gl);padding:.3rem .95rem;border-radius:20px;transition:all .2s}
-.nav-cta:hover{background:var(--g);color:#fff}
+.nav{position:sticky;top:0;background:rgba(232,221,201,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:100;border-bottom:.5px solid rgba(122,111,92,.15)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:'DM Serif Display',serif;font-size:1.05rem;color:#3D352A;letter-spacing:-0.01em}
+.brand-sub{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#9A8F7C;font-weight:500;margin-top:.1rem}
+.nav-links{display:flex;gap:.4rem;flex-wrap:wrap}
+.nav-link{font-size:.78rem;color:#5A4F3C;text-decoration:none;padding:.45rem .85rem;border-radius:4px;transition:all .2s;font-family:inherit}
+.nav-link:hover{background:rgba(122,111,92,.1);color:#3D352A}
+.nav-cta{font-size:.75rem;color:#FFFCF5;background:#3D352A;text-decoration:none;padding:.55rem 1rem;border-radius:6px;transition:all .2s}
+.nav-cta:hover{background:#5A4F3C}
 
 /* HERO */
-#hero{min-height:100vh;display:flex;align-items:center;padding-top:58px;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 75% 45%,rgba(27,94,59,.07) 0%,transparent 70%),radial-gradient(ellipse 35% 50% at 15% 75%,rgba(27,94,59,.04) 0%,transparent 60%)}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:56px 56px;opacity:.3;mask-image:radial-gradient(ellipse 85% 85% at 50% 50%,black,transparent)}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:3.5rem;align-items:center;max-width:1100px;margin:0 auto;padding:0 2rem;width:100%}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gm);margin-bottom:1.25rem}
-.hero-eyebrow::before{content:'';display:block;width:22px;height:1px;background:var(--gm)}
-h1{font-family:var(--serif);font-size:clamp(2.8rem,5.5vw,4.6rem);line-height:1.05;letter-spacing:-.02em;color:var(--dark);margin-bottom:.9rem}
-.cycle{color:var(--g);transition:opacity .3s,transform .3s;display:inline-block}
-.hero-sub{font-size:1rem;color:var(--muted);font-weight:300;max-width:460px;margin-bottom:2.25rem;line-height:1.65}
-.hero-sub strong{color:var(--mid);font-weight:400}
-.hero-btns{display:flex;gap:.875rem;flex-wrap:wrap}
-.btn-p{display:inline-flex;align-items:center;gap:.4rem;background:var(--g);color:#fff;padding:.7rem 1.6rem;border-radius:4px;text-decoration:none;font-size:.875rem;font-weight:500;transition:all .2s}
-.btn-p:hover{background:var(--gm);transform:translateY(-1px)}
-.btn-g{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--rule);color:var(--mid);padding:.7rem 1.6rem;border-radius:4px;text-decoration:none;font-size:.875rem;transition:all .2s}
-.btn-g:hover{border-color:var(--gl);color:var(--g);transform:translateY(-1px)}
-
-/* metrics card */
-.m-card{background:#fff;border:1px solid var(--rule);border-radius:12px;padding:1.75rem;position:relative}
-.m-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--g);border-radius:12px 12px 0 0}
-.m-item{padding:1.1rem 0;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:.75rem}
-.m-item:first-child{padding-top:0}
-.m-item:last-child{border-bottom:none;padding-bottom:0}
-.m-num{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--g)}
-.m-label{font-size:.78rem;color:var(--muted)}
+.hero{padding:5rem 2rem 4rem;text-align:left;max-width:1200px;margin:0 auto}
+.hero-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#9A8F7C;font-weight:500;margin-bottom:1.25rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,6vw,4.8rem);font-weight:400;color:#3D352A;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:#5A8541}
+.hero-lead{font-size:1.05rem;color:#5A4F3C;line-height:1.65;max-width:640px;margin-bottom:2rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:2rem;padding-top:2rem;border-top:.5px solid rgba(122,111,92,.2)}
+.hero-meta-item{display:flex;flex-direction:column;gap:.2rem}
+.hero-meta-label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#9A8F7C;font-weight:500}
+.hero-meta-val{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#3D352A}
 
 /* SECTIONS */
-section{padding:6.5rem 0}
-.container{max-width:900px;margin:0 auto;padding:0 2rem}
-.cwide{max-width:1100px;margin:0 auto;padding:0 2rem}
-.sec-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gm);margin-bottom:.875rem}
-.sec-label::before{content:'';display:block;width:18px;height:1px;background:var(--gm)}
-h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);line-height:1.1;letter-spacing:-.02em;color:var(--dark);margin-bottom:1.5rem}
+.section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
+.section-head{margin-bottom:2.5rem;max-width:760px}
+.section-label{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#9A8F7C;font-weight:500;margin-bottom:.85rem}
+.section h2{font-family:'DM Serif Display',serif;font-size:clamp(1.85rem,4vw,2.85rem);font-weight:400;color:#3D352A;line-height:1.15;letter-spacing:-0.015em;margin-bottom:1rem}
+.section h2 em{font-style:italic;color:#5A8541}
+.section-lead{font-size:.95rem;color:#5A4F3C;line-height:1.65}
 
-/* SOBRE */
-#sobre{background:#fff}
-.sobre-text{font-size:1.05rem;color:var(--mid);line-height:1.85;max-width:620px;margin-bottom:2.75rem;font-weight:300}
-.sobre-text em{font-style:italic;color:var(--gm);font-weight:400}
-.tl{position:relative;padding-left:1.75rem}
-.tl::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--gl)}
-.tl-item{position:relative;padding-bottom:2.25rem;opacity:0;transform:translateX(-8px);transition:opacity .5s,transform .5s}
-.tl-item.vis{opacity:1;transform:none}
-.tl-item:last-child{padding-bottom:0}
-.tl-dot{position:absolute;left:-2.2rem;top:5px;width:9px;height:9px;border-radius:50%;background:var(--gl);border:2px solid var(--g)}
-.tl-item.cur .tl-dot{background:var(--g)}
-.tl-period{font-size:.72rem;color:var(--muted);letter-spacing:.05em;margin-bottom:.2rem}
-.tl-co{font-size:.88rem;font-weight:500;color:var(--dark)}
-.tl-role{font-size:.82rem;color:var(--gm)}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:start}
+.about-text p{font-size:.95rem;color:#5A4F3C;line-height:1.75;margin-bottom:1rem}
+.about-text p strong{color:#3D352A;font-weight:500}
+.about-skills{background:rgba(255,253,248,.6);border:.5px solid rgba(122,111,92,.2);border-radius:10px;padding:1.5rem 1.75rem}
+.skill-cat{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#9A8F7C;margin-bottom:.6rem;font-weight:500;margin-top:1.25rem}
+.skill-cat:first-child{margin-top:0}
+.skill-list{display:flex;flex-direction:column;gap:.4rem}
+.skill-item{font-size:.85rem;color:#3D352A;display:flex;align-items:center;gap:.5rem}
+.skill-item::before{content:'';width:5px;height:5px;border-radius:50%;background:#5A8541;flex-shrink:0}
 
-/* 3D SECTION */
-#edificio{background:var(--dark);color:#fff;padding:6.5rem 0}
-#edificio .sec-label{color:#4ADE80}
-#edificio .sec-label::before{background:#4ADE80}
-#edificio h2{color:#fff}
-.building-wrap{display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start;margin-top:2.5rem}
-#three-canvas{width:100%;height:480px;border-radius:12px;border:1px solid rgba(255,255,255,.08);cursor:grab;display:block;background:transparent}
-#three-canvas:active{cursor:grabbing}
-.systems-panel{display:flex;flex-direction:column;gap:.6rem}
-.sys-btn{display:flex;align-items:center;gap:.875rem;padding:.9rem 1.1rem;border:1px solid rgba(255,255,255,.08);border-radius:8px;cursor:pointer;transition:all .2s;background:rgba(255,255,255,.03);text-align:left}
-.sys-btn:hover{background:rgba(255,255,255,.07);border-color:rgba(45,134,83,.4)}
-.sys-btn.active{background:rgba(27,94,59,.25);border-color:rgba(45,134,83,.6)}
-.sys-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-.sys-info{}
-.sys-name{font-size:.85rem;font-weight:500;color:#fff;margin-bottom:.15rem}
-.sys-desc{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.4}
-.sys-detail{margin-top:1.5rem;padding:1.1rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;min-height:80px;transition:all .3s}
-.sys-detail p{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.65;font-style:italic}
-.building-hint{font-size:.75rem;color:rgba(255,255,255,.25);margin-top:.75rem;text-align:center}
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:grid;grid-template-columns:160px 1fr;gap:2.5rem;padding:1.75rem 0;border-bottom:.5px solid rgba(122,111,92,.15);align-items:start}
+.tl-item:last-child{border-bottom:none}
+.tl-period{font-size:.7rem;color:#9A8F7C;font-style:italic;padding-top:.3rem}
+.tl-content{display:flex;flex-direction:column;gap:.4rem}
+.tl-role{font-family:'DM Serif Display',serif;font-size:1.25rem;color:#3D352A;line-height:1.25}
+.tl-company{font-size:.78rem;color:#5A8541;font-weight:500;letter-spacing:.02em}
+.tl-desc{font-size:.88rem;color:#5A4F3C;line-height:1.65;margin-top:.4rem}
+.tl-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem}
+.tl-tag{font-size:.65rem;color:#5A4F3C;background:rgba(122,111,92,.1);padding:.25rem .65rem;border-radius:10px}
 
-/* PORTFÓLIO */
-#portfolio{background:var(--bg)}
-.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem;margin-top:1.5rem}
-.filt-btn{font-size:.75rem;font-weight:500;padding:.35rem .9rem;border-radius:20px;border:1px solid var(--rule);background:#fff;color:var(--muted);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:.35rem}
-.filt-btn:hover{border-color:var(--gl);color:var(--g)}
-.filt-btn.on{background:var(--g);border-color:var(--g);color:#fff}
-.filt-btn .cnt{font-size:.65rem;opacity:.75}
-.port-stats{display:flex;gap:2rem;margin-bottom:2rem;flex-wrap:wrap}
-.pstat{display:flex;flex-direction:column}
-.pstat-num{font-family:var(--serif);font-size:2rem;color:var(--g);line-height:1}
-.pstat-label{font-size:.72rem;color:var(--muted);margin-top:.2rem}
-.port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.875rem}
-.proj-card{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:1.1rem 1.25rem;transition:all .2s;position:relative;overflow:hidden}
-.proj-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
-.proj-card:hover{border-color:var(--gl);transform:translateY(-2px);box-shadow:0 4px 16px rgba(27,94,59,.08)}
-.proj-card.hide{display:none}
-.proj-name{font-size:.88rem;font-weight:500;color:var(--dark);margin-bottom:.25rem;line-height:1.3}
-.proj-client{font-size:.75rem;color:var(--muted);margin-bottom:.6rem}
-.proj-tags{display:flex;flex-wrap:wrap;gap:.3rem}
-.ptag{font-size:.65rem;font-weight:500;padding:.15rem .55rem;border-radius:10px}
+/* PORTFOLIO / GBC SIMULATOR */
+.section.dark-bg{background:rgba(255,253,248,.5);border-radius:14px;border:.5px solid rgba(122,111,92,.18);padding:3rem 2.5rem}
 
-/* tag colors */
-.c-leed{background:#EAF3DE;color:#27500A}.pc-leed::before{background:#3B6D11}
-.c-gbc{background:#E6F1FB;color:#0C447C}.pc-gbc::before{background:#185FA5}
-.c-fitwel{background:#FAEEDA;color:#854F0B}.pc-fitwel::before{background:#BA7517}
-.c-edge{background:#FBEAF0;color:#72243E}.pc-edge::before{background:#993556}
-.c-zero{background:#EEEDFE;color:#3C3489}.pc-zero::before{background:#534AB7}
-.c-well{background:#E1F5EE;color:#085041}.pc-well::before{background:#0F6E56}
-.c-active{background:#F1EFE8;color:#2C2C2A}.pc-active::before{background:#5F5E5A}
-.c-other{background:#F1EFE8;color:#5F5E5A}.pc-other::before{background:#888780}
+/* POSTS */
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.post-card{background:rgba(255,253,248,.7);border:.5px solid rgba(122,111,92,.2);border-radius:10px;overflow:hidden;transition:transform .2s,border-color .2s;cursor:pointer}
+.post-card:hover{transform:translateY(-2px);border-color:rgba(90,133,65,.4)}
+.post-img{width:100%;aspect-ratio:16/10;background:linear-gradient(135deg,rgba(90,133,65,.18),rgba(122,111,92,.1));position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.post-img-icon{font-family:'DM Serif Display',serif;font-size:3rem;color:rgba(90,133,65,.45);font-style:italic}
+.post-body{padding:1.25rem 1.4rem 1.4rem}
+.post-tag{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#5A8541;font-weight:500;margin-bottom:.55rem}
+.post-title{font-family:'DM Serif Display',serif;font-size:1.15rem;color:#3D352A;line-height:1.3;margin-bottom:.55rem}
+.post-excerpt{font-size:.83rem;color:#5A4F3C;line-height:1.6;margin-bottom:.85rem}
+.post-meta{font-size:.7rem;color:#9A8F7C;font-style:italic;display:flex;justify-content:space-between;padding-top:.65rem;border-top:.5px solid rgba(122,111,92,.15)}
+.post-empty{text-align:center;padding:3rem 2rem;background:rgba(255,253,248,.4);border:1px dashed rgba(122,111,92,.3);border-radius:12px}
+.post-empty-text{font-style:italic;color:#7A6F5C;font-size:.92rem;line-height:1.6;max-width:480px;margin:0 auto}
 
-/* COMPETÊNCIAS */
-#competencias{background:#fff}
-.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
-.sk-group{border:1px solid var(--rule);border-radius:10px;padding:1.5rem}
-.sk-title{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gm);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid var(--gl)}
-.sk-item{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--mid);padding:.35rem 0;border-bottom:1px solid var(--rule)}
-.sk-item:last-child{border-bottom:none}
-.sk-item::before{content:'·';color:var(--g);font-size:1.1rem;line-height:1}
-.cert-bar{grid-column:1/-1;background:var(--gp);border:1px solid var(--gl);border-radius:10px;padding:1.25rem 1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.cert-ico{width:44px;height:44px;background:var(--g);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:1.2rem;flex-shrink:0}
-.cert-name{font-weight:500;color:var(--dark);font-size:.9rem}
-.cert-org{font-size:.75rem;color:var(--muted)}
-.cert-badge{font-size:.72rem;font-weight:500;color:var(--g);background:var(--gl);padding:.25rem .8rem;border-radius:20px;white-space:nowrap}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.contact-card{background:rgba(255,253,248,.6);border:.5px solid rgba(122,111,92,.2);border-radius:10px;padding:2rem 2.25rem}
+.contact-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#9A8F7C;font-weight:500;margin-bottom:.5rem}
+.contact-line{font-size:1rem;color:#3D352A;margin-bottom:1.4rem;font-family:'DM Serif Display',serif}
+.contact-link{color:#5A8541;text-decoration:none;border-bottom:.5px dotted #5A8541;transition:color .2s}
+.contact-link:hover{color:#3D5C24}
 
-/* PLATAFORMA */
-#plataforma{background:var(--dark);color:#fff}
-#plataforma .sec-label{color:#4ADE80}
-#plataforma .sec-label::before{background:#4ADE80}
-#plataforma h2{color:#fff}
-.plat-sub{font-size:.95rem;color:rgba(255,255,255,.45);max-width:500px;font-weight:300;line-height:1.7;margin-bottom:2.5rem}
-.plat-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2);color:#4ADE80;font-size:.72rem;padding:.28rem .8rem;border-radius:20px;margin-bottom:1.25rem}
-.plat-badge::before{content:'●';font-size:.45rem;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.plat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.plat-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:1.5rem;transition:all .2s;position:relative;overflow:hidden}
-.plat-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gm);opacity:0;transition:opacity .2s}
-.plat-card:hover{background:rgba(255,255,255,.07);transform:translateY(-2px)}
-.plat-card:hover::before{opacity:1}
-.plat-ico{width:38px;height:38px;background:rgba(27,94,59,.3);border:1px solid rgba(45,134,83,.3);border-radius:7px;display:flex;align-items:center;justify-content:center;margin-bottom:.875rem;font-size:1rem}
-.plat-title{font-weight:500;color:#fff;margin-bottom:.4rem;font-size:.9rem}
-.plat-desc{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.6}
-.plat-note{margin-top:1.75rem;padding:1.25rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:7px;font-size:.8rem;color:rgba(255,255,255,.4);line-height:1.7}
-.plat-note strong{color:rgba(255,255,255,.65);font-weight:500}
+/* FOOTER */
+footer{padding:3rem 2rem 2rem;border-top:.5px solid rgba(122,111,92,.2);margin-top:4rem;text-align:center}
+.foot-text{font-size:.78rem;color:#7A6F5C;font-style:italic}
+.foot-name{font-family:'DM Serif Display',serif;color:#3D352A;font-style:normal}
 
-/* CONTATO */
-#contato{background:var(--dark);color:#fff;text-align:center}
-#contato h2{color:#fff;margin-bottom:.75rem}
-.cont-sub{font-size:.95rem;color:rgba(255,255,255,.4);margin-bottom:2.5rem;font-weight:300}
-.cont-links{display:flex;justify-content:center;gap:.875rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.cont-link{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.65);padding:.7rem 1.4rem;border-radius:4px;text-decoration:none;font-size:.85rem;transition:all .2s}
-.cont-link:hover{border-color:var(--gm);color:#fff;background:rgba(27,94,59,.2)}
-.cont-link.dl{background:var(--g);border-color:var(--g);color:#fff}
-.cont-link.dl:hover{background:var(--gm);border-color:var(--gm)}
-.blog-soon{border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);border-radius:8px;padding:1.75rem;max-width:440px;margin:0 auto;font-size:.82rem;color:rgba(255,255,255,.3);font-style:italic;line-height:1.6}
-.blog-soon strong{color:rgba(255,255,255,.5);font-weight:400}
+/* PARAMETRIC CONTROLS */
+.params{background:rgba(255,253,248,.7);border:.5px solid rgba(122,111,92,.25);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.params-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:1rem}
+.params-label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#9A8F7C;margin-bottom:.3rem;font-weight:500}
+.params-h{font-family:'DM Serif Display',serif;font-size:1.2rem;color:#3D352A;margin:0;font-weight:400}
+.params-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;align-items:center}
+.param{display:flex;flex-direction:column;gap:.4rem}
+.param-name{font-size:.7rem;color:#5A4F3C;display:flex;justify-content:space-between;align-items:center}
+.param-name span{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#3D352A;line-height:1}
+.param-input{display:flex;gap:.5rem;align-items:center}
+input[type=range]{flex:1;-webkit-appearance:none;height:4px;background:rgba(122,111,92,.2);border-radius:2px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;background:#5A4F3C;border-radius:50%;cursor:pointer;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;background:#5A4F3C;border-radius:50%;cursor:pointer;border:2px solid #fff}
+input[type=number]{width:60px;padding:.3rem .5rem;border:.5px solid rgba(122,111,92,.3);border-radius:4px;background:rgba(255,253,248,.5);font-family:inherit;font-size:.78rem;color:#3D352A;text-align:center}
+.param-meta{font-size:.65rem;color:#9A8F7C;font-style:italic}
+.computed{display:flex;gap:1.5rem;padding:.75rem 1rem;background:rgba(122,111,92,.06);border-radius:6px;margin-top:1rem;flex-wrap:wrap}
+.computed-item{display:flex;flex-direction:column;gap:.1rem}
+.computed-label{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#9A8F7C}
+.computed-val{font-family:'DM Serif Display',serif;font-size:1rem;color:#3D352A}
 
-footer{padding:1.25rem 2rem;background:var(--dark);border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.72rem;color:rgba(255,255,255,.18)}
+/* LAYOUT 3D */
+.layout{display:grid;grid-template-columns:1fr 220px;gap:1.25rem;align-items:start}
+canvas{width:100%;height:580px;display:block;border-radius:8px;cursor:grab;background:#E8DDC9}
+.menu{display:flex;flex-direction:column;gap:.4rem;max-height:580px;overflow-y:auto;padding-right:4px}
+.cat{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#9A8F7C;margin:.5rem 0 .3rem;font-weight:500}
+.cat:first-child{margin-top:0}
+.sb{background:transparent;border:.5px solid rgba(122,111,92,.25);color:#5A4F3C;padding:.55rem .75rem;border-radius:6px;font-size:.74rem;text-align:left;cursor:pointer;display:flex;align-items:center;gap:.5rem;transition:all .2s;font-family:inherit}
+.sb::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--c);flex-shrink:0}
+.sb:hover{background:rgba(122,111,92,.12);border-color:rgba(122,111,92,.45);color:#3D352A}
+.hint{font-size:11px;color:#7A6F5C;text-align:center;margin-top:8px;font-style:italic}
+.info{margin-top:1rem;padding:1rem 1.25rem;background:rgba(122,111,92,.08);border:.5px solid rgba(122,111,92,.15);border-radius:8px;font-size:.85rem;color:#5A4F3C;line-height:1.65;font-style:italic;min-height:50px;font-family:'DM Serif Display',serif}
 
-/* FADE */
-.fi{opacity:0;transform:translateY(14px);animation:fu .65s forwards}
-.fi:nth-child(1){animation-delay:.08s}.fi:nth-child(2){animation-delay:.2s}.fi:nth-child(3){animation-delay:.35s}.fi:nth-child(4){animation-delay:.5s}
-@keyframes fu{to{opacity:1;transform:none}}
-.reveal{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s}
-.reveal.vis{opacity:1;transform:none}
+/* TABS */
+.tabs{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:1rem;border-bottom:.5px solid rgba(122,111,92,.2);padding-bottom:.5rem}
+.tab{background:transparent;border:none;padding:.45rem .9rem;font-size:.74rem;font-family:inherit;color:#7A6F5C;cursor:pointer;border-radius:4px;transition:all .2s;letter-spacing:.02em}
+.tab:hover{background:rgba(122,111,92,.08);color:#3D352A}
+.tab.on{background:rgba(122,111,92,.15);color:#3D352A;font-weight:500}
+.tab-content{display:none}
+.tab-content.on{display:block}
 
+/* SYSTEM CARDS */
+.sys-card{border:.5px solid rgba(122,111,92,.25);border-radius:8px;padding:.75rem .9rem;background:rgba(255,253,248,.4);transition:opacity .2s}
+.sys-card.disabled{opacity:.5}
+.sys-head{margin-bottom:.5rem}
+.sys-toggle{display:flex;align-items:center;gap:.6rem;cursor:pointer;font-size:.8rem;color:#3D352A;font-weight:500}
+.sys-toggle input[type=checkbox]{width:14px;height:14px;accent-color:#5A4F3C;cursor:pointer}
+.sys-name{display:flex;align-items:center;gap:.5rem}
+.sys-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sys-body{display:flex;flex-direction:column;gap:.4rem}
+.sys-input{display:flex;flex-direction:column;gap:.2rem}
+.sys-input label{font-size:.68rem;color:#5A4F3C}
+.sys-input>div{display:flex;align-items:center;gap:.4rem}
+.sys-input input[type=number],.sys-input select{flex:1;padding:.3rem .5rem;border:.5px solid rgba(122,111,92,.3);border-radius:4px;background:rgba(255,253,248,.7);font-family:inherit;font-size:.74rem;color:#3D352A}
+.sys-input .unit{font-size:.62rem;color:#9A8F7C;font-style:italic;flex-shrink:0}
+
+/* DASHBOARD */
+.dash{margin-top:2rem;padding-top:1.75rem;border-top:.5px solid rgba(122,111,92,.2)}
+.dash-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem}
+.dash-label{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#9A8F7C;margin-bottom:.4rem;font-weight:500}
+.dash-h{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#3D352A;margin:0 0 .4rem;font-weight:400;line-height:1.15}
+.dash-p{font-size:.78rem;color:#5A4F3C;line-height:1.55;margin:0;max-width:500px;font-style:italic}
+.dash-time{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color:#7A6F5C}
+.dash-dot{width:7px;height:7px;border-radius:50%;background:#6B8E4E;animation:pulseDot 2s infinite}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.3}}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:.875rem}
+.card{background:rgba(255,253,248,.7);border-radius:10px;padding:1.1rem 1.2rem}
+.card.w{border:.5px solid rgba(92,155,181,.3)}
+.card.e{border:.5px solid rgba(212,165,71,.3)}
+.card-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:.7rem}
+.card-l{display:flex;align-items:center;gap:.5rem}
+.card-d{width:8px;height:8px;border-radius:50%}
+.card-t{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;margin:0;font-weight:500}
+.card-tag{font-size:.65rem;padding:.15rem .55rem;border-radius:10px}
+.card-big{font-family:'DM Serif Display',serif;font-size:1.85rem;color:#3D352A;margin:0;line-height:1;font-weight:400}
+.card-big-unit{font-size:.7rem;color:#7A6F5C;font-family:'DM Sans',sans-serif;font-weight:400;margin-left:.25rem}
+
+/* RESPONSIVE */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .m-card{display:grid;grid-template-columns:repeat(3,1fr)}
-  .m-item{border-bottom:none;border-right:1px solid var(--rule);padding:1rem}
-  .m-item:last-child{border-right:none}
-  .building-wrap{grid-template-columns:1fr}
-  #three-canvas{height:340px}
-  .sk-grid{grid-template-columns:1fr}
-  .plat-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .layout{grid-template-columns:1fr}
+  .menu{max-height:none;flex-direction:row;flex-wrap:wrap}
+  canvas{height:420px}
+  .tl-item{grid-template-columns:1fr;gap:.8rem;padding:1.5rem 0}
   .nav-links{display:none}
-  section{padding:4rem 0}
+}
+@media(max-width:700px){
+  .params-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .hero{padding:3rem 1rem 2.5rem}
+  .section{padding:3.5rem 1rem}
+  .wrap{padding:0 1rem}
+  body{padding:0}
 }
 </style>
 </head>
 <body>
 
-<nav>
-  <span class="nav-name">Rafael Ávila Janz</span>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#edificio">Edifício ESG</a></li>
-    <li><a href="#portfolio">Projetos</a></li>
-    <li><a href="#plataforma">Plataforma</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a href="#contato" class="nav-cta">Falar comigo</a>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div>
+      <div class="brand">Rafael Ávila Janz</div>
+      <div class="brand-sub">ESG · Sustainability · Innovation</div>
+    </div>
+    <div class="nav-links">
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#experiencia" class="nav-link">Experiência</a>
+      <a href="#simulador" class="nav-link">Simulador</a>
+      <a href="#posts" class="nav-link">Publicações</a>
+      <a href="#contato" class="nav-cta">Contato</a>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div><div class="hero-grid"></div>
-  <div class="hero-inner">
+<section class="hero">
+  <p class="hero-label">Coordenador · Engenharia · Inovação ESG</p>
+  <h1>Engenharia de impacto para o<br>setor de <em>sustentabilidade</em>.</h1>
+  <p class="hero-lead">Cinco anos coordenando projetos LEED para grandes incorporadoras brasileiras, hoje desenvolvendo uma plataforma proprietária com IA que transforma como o setor analisa e certifica edifícios sustentáveis.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Projetos coordenados</span>
+      <span class="hero-meta-val">50+ certificações LEED</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Plataforma com IA</span>
+      <span class="hero-meta-val">2h → 3 min por análise</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Conformidade auditorias</span>
+      <span class="hero-meta-val">100% sem questionamentos</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Localização</span>
+      <span class="hero-meta-val">Curitiba, PR · Brasil</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="sobre">
+  <div class="section-head">
+    <p class="section-label">Sobre</p>
+    <h2>Engenheiro Civil com vocação para <em>resolver problemas</em> em sistemas complexos.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Formado em Engenharia Civil pela <strong>PUC-PR</strong> (2019), com pesquisa científica em geotecnia (PIBITI) e certificação <strong>LEED Green Associate</strong> pelo USGBC. Hoje atuo como Coordenador de Sustentabilidade & Inovação na Forte Desenvolvimento Sustentável.</p>
+      <p>Coordeno simultaneamente <strong>mais de 50 projetos LEED</strong> para grandes incorporadoras brasileiras como GT Building, AG7 e Tishman Speyer. O que me move não é a gestão em si, mas a possibilidade de <strong>identificar ineficiências operacionais</strong> e transformá-las em soluções concretas — unindo visão técnica, domínio do setor e uso estratégico de tecnologia.</p>
+      <p>Atualmente desenvolvo uma <strong>plataforma proprietária com IA</strong> que automatiza análises técnicas e geração de relatórios de conformidade — reduzindo tarefas que levavam ~2 horas para menos de 3 minutos por requisito. Análise bioclimática, classificação automática de espécies vegetais por geolocalização e geração inteligente de relatórios já são parte do que ela faz.</p>
+      <p>Acredito que o futuro da consultoria ESG está em <strong>menos planilhas e mais raciocínio</strong>. Minha aposta é construir as ferramentas que permitem isso.</p>
+    </div>
+    <div class="about-skills">
+      <p class="skill-cat">Tecnologias</p>
+      <div class="skill-list">
+        <span class="skill-item">Google AI Studio (vibe-code)</span>
+        <span class="skill-item">Python · VBA · Macros</span>
+        <span class="skill-item">Autodesk Revit · Navisworks</span>
+        <span class="skill-item">BIM 5D · SINAPI</span>
+      </div>
+      <p class="skill-cat">Sustentabilidade</p>
+      <div class="skill-list">
+        <span class="skill-item">Certificações LEED</span>
+        <span class="skill-item">Gestão de emissões GEE</span>
+        <span class="skill-item">Análise bioclimática</span>
+        <span class="skill-item">Indicadores GBC</span>
+      </div>
+      <p class="skill-cat">Idiomas</p>
+      <div class="skill-list">
+        <span class="skill-item">Português — nativo</span>
+        <span class="skill-item">Inglês — avançado (R/W)</span>
+      </div>
+      <p class="skill-cat">Credenciais</p>
+      <div class="skill-list">
+        <span class="skill-item">CREA PR-182186/D</span>
+        <span class="skill-item">LEED Green Associate · USGBC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experiencia">
+  <div class="section-head">
+    <p class="section-label">Trajetória</p>
+    <h2>De pesquisador a <em>arquiteto de soluções</em>.</h2>
+    <p class="section-lead">Cinco anos numa empresa, três posições, escopo crescente — do analista que entende o problema técnico ao coordenador que constrói as ferramentas para resolvê-lo.</p>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-period">Jan. 2025 — Atual</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Coordenador de Sustentabilidade & Inovação</h3>
+        <span class="tl-company">Forte Desenvolvimento Sustentável · Curitiba</span>
+        <p class="tl-desc">Coordenação simultânea de 50+ projetos LEED. Desenvolvimento e implementação de plataforma proprietária com IA para automatizar análises técnicas e geração de relatórios de conformidade — eliminando gargalos manuais do processo de certificação.</p>
+        <div class="tl-tags">
+          <span class="tl-tag">LEED</span>
+          <span class="tl-tag">IA aplicada</span>
+          <span class="tl-tag">Liderança técnica</span>
+          <span class="tl-tag">ESG</span>
+        </div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-period">Jul. 2023 — Dez. 2024</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Supervisor de Sustentabilidade</h3>
+        <span class="tl-company">Forte Desenvolvimento Sustentável</span>
+        <p class="tl-desc">Supervisão de equipe multidisciplinar e processos de certificação LEED. Avaliação de riscos e oportunidades de sustentabilidade em projetos. Gestão de auditorias com 100% de conformidade.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-period">Jul. 2021 — Jul. 2023</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Analista de Sustentabilidade</h3>
+        <span class="tl-company">Forte Desenvolvimento Sustentável</span>
+        <p class="tl-desc">Análise de estratégias de redução de emissões GEE e eficiência energética para certificações LEED. Elaboração de relatórios técnicos e apresentações para stakeholders.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-period">Fev. — Jul. 2021</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Gerenciador de Obras</h3>
+        <span class="tl-company">Envision PM</span>
+        <p class="tl-desc">Gestão de obras de grande porte (Loja Atacadão Wenceslau Braz e CD Atacadão Pinhais): cronograma, controle de qualidade, relatórios e resolução de conflitos.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-period">Nov. 2019 — Jun. 2020</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Analista</h3>
+        <span class="tl-company">Trajetória Consultoria · US Global Parts</span>
+        <p class="tl-desc">Pesquisas de viabilidade econômica para exportação de autopeças brasileiras ao mercado americano. Gestão de pipeline via CRM Pipedrive.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-period">Jul. 2018 — Fev. 2019</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Estagiário BIM</h3>
+        <span class="tl-company">Campestrini Estudos e Planejamento</span>
+        <p class="tl-desc">Modelagem 3D em Autodesk Revit e Revit MEP. Compatibilização com Navisworks. Orçamentos BIM 5D com SINAPI.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <span class="tl-period">2017 — 2019</span>
+      <div class="tl-content">
+        <h3 class="tl-role">Estagiário de Pesquisa · PIBITI</h3>
+        <span class="tl-company">Institutos Lactec — LAME</span>
+        <p class="tl-desc">Pesquisa em monitoramento em tempo real de encostas e barragens com tecnologia de fibra óptica. Ensaios geotécnicos de laboratório.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULADOR / GBC -->
+<section class="section" id="simulador">
+  <div class="section-head">
+    <p class="section-label">Demonstração interativa</p>
+    <h2>Simulador GBC de um <em>condomínio paramétrico</em>.</h2>
+    <p class="section-lead">Uma demonstração do tipo de ferramenta que construo: dimensione um empreendimento, ative sistemas sustentáveis e veja em tempo real como a volumetria 3D, os indicadores GBC e a economia anual respondem. Cálculos seguindo NBR, ASHRAE 90.1 e referências do Green Building Council.</p>
+  </div>
+
+<div class="wrap" style="padding:0;max-width:none">
+
+<!-- PARAMETRIC CONTROLS -->
+<div class="params">
+  <div class="params-head">
     <div>
-      <p class="hero-eyebrow fi">Engenheiro Civil · LEED Green Associate · CREA PR-182186/D</p>
-      <h1 class="fi">ESG.<br><span class="cycle" id="cy">Inovação.</span><br>IA.</h1>
-      <p class="hero-sub fi">Coordenador de Sustentabilidade com 5 anos em certificações LEED. <strong>Desenvolvendo uma plataforma com IA</strong> que transforma análises de 2 horas em 3 minutos.</p>
-      <div class="hero-btns fi">
-        <a href="#portfolio" class="btn-p">Ver projetos</a>
-        <a href="#contato" class="btn-g">Falar comigo</a>
-      </div>
+      <p class="params-label">Configuração paramétrica</p>
+      <h3 class="params-h">Dimensione o empreendimento</h3>
     </div>
-    <div class="m-card fi">
-      <div class="m-item"><span class="m-num">50+</span><span class="m-label">projetos LEED coordenados</span></div>
-      <div class="m-item"><span class="m-num">3min</span><span class="m-label">vs 2h por requisito de análise</span></div>
-      <div class="m-item"><span class="m-num">100%</span><span class="m-label">conformidade em auditorias</span></div>
+    <p style="font-size:.72rem;color:#7A6F5C;font-style:italic;max-width:340px;text-align:right">Ajuste os parâmetros e veja a volumetria do conjunto reagir em tempo real</p>
+  </div>
+  <div class="params-grid">
+    <div class="param">
+      <div class="param-name">Total de unidades <span id="v-units">88</span></div>
+      <div class="param-input">
+        <input type="range" id="r-units" min="4" max="640" value="88" step="1">
+        <input type="number" id="n-units" min="4" max="640" value="88">
+      </div>
+      <p class="param-meta">4 a 640 unidades · ajuste fino com o campo numérico</p>
+    </div>
+    <div class="param">
+      <div class="param-name">Unidades por andar <span id="v-perfloor">4</span></div>
+      <div class="param-input">
+        <input type="range" id="r-perfloor" min="1" max="8" value="4" step="1">
+      </div>
+      <p class="param-meta">1 a 8 unidades por pavimento</p>
+    </div>
+    <div class="param">
+      <div class="param-name">Andares máx/torre <span id="v-maxfl">11</span></div>
+      <div class="param-input">
+        <input type="range" id="r-maxfl" min="4" max="40" value="11" step="1">
+      </div>
+      <p class="param-meta">4 a 40 andares por torre · gera novas torres se necessário</p>
     </div>
   </div>
-</section>
-
-<!-- SOBRE -->
-<section id="sobre">
-  <div class="container">
-    <p class="sec-label">Sobre</p>
-    <h2>Engenheiro que<br><em style="font-style:italic;color:var(--gm)">constrói soluções.</em></h2>
-    <p class="sobre-text">Não me conformo com processos manuais quando existe tecnologia para resolvê-los melhor. Ao longo de 5 anos em consultoria de sustentabilidade, percebi que o setor patinava em tarefas repetitivas — e decidi <em>fazer algo a respeito</em>. Hoje coordeno mais de 50 projetos simultâneos e desenvolvo uma plataforma com IA que está mudando a forma como a consultoria ESG funciona.</p>
-    <div class="tl">
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-period">2017 – 2019</div><div class="tl-co">Institutos Lactec · Campestrini</div><div class="tl-role">Pesquisa geotécnica com fibra óptica · BIM e orçamentos SINAPI</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-period">2019</div><div class="tl-co">PUC Paraná</div><div class="tl-role">Bacharelado em Engenharia Civil · LEED Green Associate (USGBC)</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-period">2021 – 2023</div><div class="tl-co">Forte Desenvolvimento Sustentável</div><div class="tl-role">Analista → Supervisor de Sustentabilidade</div></div>
-      <div class="tl-item cur"><div class="tl-dot"></div><div class="tl-period">2025 – hoje</div><div class="tl-co">Forte Desenvolvimento Sustentável</div><div class="tl-role">Coordenador · Desenvolvendo plataforma ESG com IA</div></div>
-    </div>
+  <div class="computed">
+    <div class="computed-item"><span class="computed-label">Torres</span><span class="computed-val" id="c-towers">2</span></div>
+    <div class="computed-item"><span class="computed-label">Andares por torre</span><span class="computed-val" id="c-floors">11</span></div>
+    <div class="computed-item"><span class="computed-label">Unidades por torre</span><span class="computed-val" id="c-perTower">44</span></div>
+    <div class="computed-item"><span class="computed-label">Total efetivo</span><span class="computed-val" id="c-total">88</span></div>
   </div>
-</section>
+</div>
 
-<!-- 3D BUILDING -->
-<section id="edificio">
-  <div class="cwide">
-    <p class="sec-label">Sistemas Sustentáveis</p>
-    <h2>Um edifício ESG<br>em 3D interativo</h2>
-    <div class="building-wrap">
-      <div>
-        <canvas id="three-canvas"></canvas>
-        <p class="building-hint">Arraste para rotacionar · Clique nos sistemas ao lado para destacar</p>
-      </div>
-      <div>
-        <div class="systems-panel" id="sys-panel">
-          <div class="sys-btn active" data-sys="solar" onclick="selectSys(this,'solar')">
-            <div class="sys-icon" style="background:rgba(250,200,80,.15);border:1px solid rgba(250,200,80,.3)">☀</div>
-            <div class="sys-info"><div class="sys-name">Painéis Fotovoltaicos</div><div class="sys-desc">Geração de energia solar in-loco</div></div>
+<!-- SYSTEMS CONFIGURATION -->
+<div class="params" style="margin-top:1rem">
+  <div class="params-head">
+    <div>
+      <p class="params-label">Calculadora GBC Condomínio</p>
+      <h3 class="params-h">Configure todos os parâmetros</h3>
+    </div>
+    <p style="font-size:.72rem;color:#7A6F5C;font-style:italic;max-width:340px;text-align:right">Cálculos seguem normas NBR, ASHRAE 90.1 e referências GBC · Guia LEED</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab on" data-tab="agua">Água</button>
+    <button class="tab" data-tab="energia">Energia</button>
+    <button class="tab" data-tab="paisagismo">Paisagismo</button>
+    <button class="tab" data-tab="conforto">Conforto</button>
+    <button class="tab" data-tab="local">Localização</button>
+    <button class="tab" data-tab="resid">Resíduos</button>
+    <button class="tab" data-tab="local-set">Configurações Locais</button>
+  </div>
+
+  <!-- TAB CONTENT: ÁGUA -->
+  <div class="tab-content on" data-tab="agua">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card" id="sc-irr">
+        <div class="sys-head">
+          <label class="sys-toggle"><input type="checkbox" id="sys-irr" checked><span class="sys-name"><span class="sys-dot" style="background:#6B8E4E"></span>Equipamentos Hidrossanitários</span></label>
+        </div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Vazão chuveiro</label>
+            <div><input type="number" id="i-shower" value="8" min="0" step="0.5"><span class="unit">L/min · base 12</span></div>
           </div>
-          <div class="sys-btn" data-sys="water" onclick="selectSys(this,'water')">
-            <div class="sys-icon" style="background:rgba(80,150,255,.15);border:1px solid rgba(80,150,255,.3)">💧</div>
-            <div class="sys-info"><div class="sys-name">Reuso de Água</div><div class="sys-desc">Captação e reaproveitamento de pluvial</div></div>
+          <div class="sys-input">
+            <label>Volume vaso sanitário</label>
+            <div><input type="number" id="i-toilet" value="3" min="0" step="0.5"><span class="unit">L · base 6</span></div>
           </div>
-          <div class="sys-btn" data-sys="green" onclick="selectSys(this,'green')">
-            <div class="sys-icon" style="background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3)">🌿</div>
-            <div class="sys-info"><div class="sys-name">Paisagismo Nativo</div><div class="sys-desc">Espécies nativas e biodiversidade</div></div>
+          <div class="sys-input">
+            <label>Vazão lavatório</label>
+            <div><input type="number" id="i-faucet" value="6" min="0" step="0.5"><span class="unit">L/min · base 9</span></div>
           </div>
-          <div class="sys-btn" data-sys="shell" onclick="selectSys(this,'shell')">
-            <div class="sys-icon" style="background:rgba(200,150,80,.15);border:1px solid rgba(200,150,80,.3)">🧱</div>
-            <div class="sys-info"><div class="sys-name">Envoltória Eficiente</div><div class="sys-desc">Vidros de baixa emissividade e isolamento</div></div>
-          </div>
-          <div class="sys-btn" data-sys="wind" onclick="selectSys(this,'wind')">
-            <div class="sys-icon" style="background:rgba(150,200,255,.15);border:1px solid rgba(150,200,255,.3)">🌬</div>
-            <div class="sys-info"><div class="sys-name">Ventilação Natural</div><div class="sys-desc">Aberturas estratégicas e conforto térmico</div></div>
-          </div>
-          <div class="sys-btn" data-sys="led" onclick="selectSys(this,'led')">
-            <div class="sys-icon" style="background:rgba(220,220,100,.15);border:1px solid rgba(220,220,100,.3)">💡</div>
-            <div class="sys-info"><div class="sys-name">Iluminação LED</div><div class="sys-desc">Sensores de presença e luz natural</div></div>
+          <div class="sys-input">
+            <label>Vazão torneira cozinha</label>
+            <div><input type="number" id="i-kitchen" value="9" min="0" step="0.5"><span class="unit">L/min · base 9</span></div>
           </div>
         </div>
-        <div class="sys-detail" id="sys-detail">
-          <p id="sys-text">Painéis fotovoltaicos no telhado geram energia limpa in-loco, reduzindo o consumo da rede e contribuindo para créditos de energia renovável nas certificações LEED e GBC.</p>
+      </div>
+
+      <div class="sys-card" id="sc-water">
+        <div class="sys-head">
+          <label class="sys-toggle"><input type="checkbox" id="sys-water" checked><span class="sys-name"><span class="sys-dot" style="background:#5C9BB5"></span>Reuso de Águas Pluviais</span></label>
+        </div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Área de captação (cobertura)</label>
+            <div><input type="number" id="i-water-area" value="244" min="0" step="10"><span class="unit">m²</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Volume reservatório pluvial</label>
+            <div><input type="number" id="i-water-vol" value="11.4" min="0" step="0.5"><span class="unit">m³</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sys-card" id="sc-grey">
+        <div class="sys-head">
+          <label class="sys-toggle"><input type="checkbox" id="sys-grey" checked><span class="sys-name"><span class="sys-dot" style="background:#A89A7A"></span>Reuso de Águas Cinzas</span></label>
+        </div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Volume reservatório de cinza tratada</label>
+            <div><input type="number" id="i-grey-vol" value="0" min="0" step="0.5"><span class="unit">m³</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#7A6F5C"></span>Pessoas por unidade</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Pessoas por UH (NBR 5626)</label>
+            <div><input type="number" id="i-ppl" value="4" min="1" max="8" step="1"><span class="unit">pessoas · alto padrão = 4</span></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- PORTFÓLIO -->
-<section id="portfolio">
-  <div class="cwide">
-    <p class="sec-label">Portfólio</p>
-    <h2>Projetos reais,<br>impacto verificável</h2>
-    <div class="port-stats">
-      <div class="pstat"><span class="pstat-num" id="stat-total">115</span><span class="pstat-label">projetos totais</span></div>
-      <div class="pstat"><span class="pstat-num" id="stat-filtered">115</span><span class="pstat-label">exibindo agora</span></div>
-      <div class="pstat"><span class="pstat-num">8</span><span class="pstat-label">tipos de certificação</span></div>
+  <!-- TAB CONTENT: ENERGIA -->
+  <div class="tab-content" data-tab="energia">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card" id="sc-solar">
+        <div class="sys-head">
+          <label class="sys-toggle"><input type="checkbox" id="sys-solar" checked><span class="sys-name"><span class="sys-dot" style="background:#D4A547"></span>Energia Fotovoltaica</span></label>
+        </div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Geração FV anual estimada</label>
+            <div><input type="number" id="i-solar-gen" value="39870" min="0" step="100"><span class="unit">kWh/ano</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#D4A547"></span>Áreas comuns</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Automação iluminação áreas comuns</label>
+            <select id="i-sensor"><option value="0">Sem automação</option><option value="0.05">Pontual (escadas, técnicas)</option><option value="0.18">Garagens</option><option value="0.25">Garagens + circulação</option><option value="0.30" selected>Cobertura ampla</option></select>
+          </div>
+          <div class="sys-input">
+            <label>Tipo de elevador</label>
+            <select id="i-elevator"><option value="conv">Convencional</option><option value="vvvf">VVVF</option><option value="regen" selected>Regenerativo</option></select>
+          </div>
+          <div class="sys-input">
+            <label>Classe rendimento das bombas</label>
+            <select id="i-pump"><option value="ir2">IR2 (mínimo legal)</option><option value="ir3" selected>IR3</option><option value="ir4">IR4 Premium</option></select>
+          </div>
+          <div class="sys-input">
+            <label>Inversor de frequência em bombas</label>
+            <select id="i-inv"><option value="nao">Não</option><option value="sim" selected>Sim</option></select>
+          </div>
+          <div class="sys-input">
+            <label>Sensor CO em garagem</label>
+            <select id="i-co"><option value="nao">Não</option><option value="sim" selected>Sim</option></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#D4A547"></span>Unidades habitacionais</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Sistema de aquecimento de água</label>
+            <select id="i-heat"><option value="el">Elétrico (chuveiro)</option><option value="gas" selected>Gás</option><option value="bomba">Bomba de calor</option><option value="solar">Aquecimento solar</option></select>
+          </div>
+          <div class="sys-input">
+            <label>Classe Procel do ar-condicionado</label>
+            <select id="i-ac"><option value="C">Classe C</option><option value="B">Classe B</option><option value="A" selected>Classe A</option></select>
+          </div>
+          <div class="sys-input">
+            <label>% LED na iluminação interna</label>
+            <div><input type="number" id="i-led" value="100" min="0" max="100" step="5"><span class="unit">%</span></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="filter-bar" id="filter-bar"></div>
-    <div class="port-grid" id="port-grid"></div>
   </div>
-</section>
 
-<!-- PLATAFORMA -->
-<section id="plataforma">
-  <div class="container">
-    <p class="sec-label">Projeto</p>
-    <div class="plat-badge">Em desenvolvimento</div>
-    <h2>Plataforma de<br>Automação ESG com IA</h2>
-    <p class="plat-sub">Construída com Google AI Studio. Resolve o que a consultoria ESG ainda faz manualmente — e deveria ter automatizado há anos.</p>
-    <div class="plat-grid">
-      <div class="plat-card"><div class="plat-ico">☀</div><div class="plat-title">Arquitetura Bioclimática</div><div class="plat-desc">Mapas interativos calculam dados bioclimáticos para LEED. Análise de ~2h → menos de 3 min por requisito.</div></div>
-      <div class="plat-card"><div class="plat-ico">🌿</div><div class="plat-title">Análise de Paisagismo com IA</div><div class="plat-desc">Identifica e classifica espécies vegetais — nativas, exóticas ou invasoras — por geolocalização do empreendimento.</div></div>
-      <div class="plat-card"><div class="plat-ico">📄</div><div class="plat-title">Relatórios de Conformidade</div><div class="plat-desc">Documentação gerada automaticamente com base nos dados e no histórico de projetos certificados.</div></div>
-      <div class="plat-card"><div class="plat-ico">🔗</div><div class="plat-title">Interface com Cliente</div><div class="plat-desc">Roadmap: incorporadoras enviam documentos diretamente. Plataforma coleta, analisa e emite documentação automaticamente.</div></div>
+  <!-- TAB CONTENT: PAISAGISMO -->
+  <div class="tab-content" data-tab="paisagismo">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#5A8541"></span>Paisagismo nativo</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Área total de paisagismo</label>
+            <div><input type="number" id="i-pais-area" value="21224" min="0" step="100"><span class="unit">m²</span></div>
+          </div>
+          <div class="sys-input">
+            <label>% de espécies nativas</label>
+            <div><input type="number" id="i-pais-nat" value="98.85" min="0" max="100" step="0.5"><span class="unit">% · mín. GBC: 40%</span></div>
+          </div>
+          <div class="sys-input">
+            <label>% de espécies adaptadas (não nativas)</label>
+            <div><input type="number" id="i-pais-adap" value="1.15" min="0" max="100" step="0.5"><span class="unit">%</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#5A8541"></span>Pontuação GBC</span></div>
+        <div class="sys-body" id="pais-score" style="padding-top:.4rem">
+          <p style="font-size:.72rem;color:#5A4F3C;line-height:1.6;margin:0">A pontuação aparecerá no dashboard de acordo com os percentuais de espécies nativas + adaptadas em relação à área total de paisagismo.</p>
+        </div>
+      </div>
     </div>
-    <div class="plat-note"><strong>Stack:</strong> Google AI Studio · GitHub · Desenvolvido com vibe-coding — o mesmo raciocínio que aplico no trabalho: usar IA para resolver problemas reais.</div>
   </div>
+
+  <!-- TAB CONTENT: CONFORTO -->
+  <div class="tab-content" data-tab="conforto">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#C9694D"></span>Conforto Térmico (simulação)</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>% redução do uso de AC</label>
+            <div><input type="number" id="i-th-ac" value="35" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+          <div class="sys-input">
+            <label>% do ano com AC ativo</label>
+            <div><input type="number" id="i-th-active" value="22" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Estabilidade térmica vs. externa</label>
+            <div><input type="number" id="i-th-stab" value="78" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Faixa de variação interna</label>
+            <div><input type="number" id="i-th-range" value="2.5" min="0" max="10" step="0.1"><span class="unit">± °C</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#E8C547"></span>Conforto Lumínico (NBR 15.575)</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>% UHs com desempenho superior</label>
+            <div><input type="number" id="i-lm-sup" value="65" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+          <div class="sys-input">
+            <label>% UHs com desempenho intermediário</label>
+            <div><input type="number" id="i-lm-int" value="30" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+          <div class="sys-input">
+            <label>% UHs com desempenho mínimo</label>
+            <div><input type="number" id="i-lm-min" value="5" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONTENT: LOCALIZAÇÃO -->
+  <div class="tab-content" data-tab="local">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#7E6CA8"></span>Caminhabilidade</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Pontuação Walkscore (0–100)</label>
+            <div><input type="number" id="i-walk" value="63" min="0" max="100" step="1"><span class="unit">pontos · walkscore.com</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Distância média moradia–trabalho</label>
+            <div><input type="number" id="i-dist" value="10" min="0" step="1"><span class="unit">km</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Consumo médio do veículo</label>
+            <div><input type="number" id="i-cons" value="10" min="1" step="0.5"><span class="unit">km/L</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONTENT: RESÍDUOS -->
+  <div class="tab-content" data-tab="resid">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#8B7A4E"></span>Resíduos de obra</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Volume total de resíduos previstos</label>
+            <div><input type="number" id="i-res-total" value="850" min="0" step="10"><span class="unit">m³ · PGRCC</span></div>
+          </div>
+          <div class="sys-input">
+            <label>% de desvio do aterro (projeto)</label>
+            <div><input type="number" id="i-res-desv" value="75" min="0" max="100" step="1"><span class="unit">%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONTENT: CONFIGURAÇÕES LOCAIS -->
+  <div class="tab-content" data-tab="local-set">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#9A8F7C"></span>Localização</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Cidade</label>
+            <select id="i-city">
+              <option value="1431" selected>Curitiba/PR · 1431 mm/ano</option>
+              <option value="1376">São Paulo/SP · 1376</option>
+              <option value="1216">Rio de Janeiro/RJ · 1216</option>
+              <option value="1316">Porto Alegre/RS · 1316</option>
+              <option value="1572">Belo Horizonte/MG · 1572</option>
+              <option value="1499">Brasília/DF · 1499</option>
+              <option value="1885">Salvador/BA · 1885</option>
+              <option value="1378">Fortaleza/CE · 1378</option>
+              <option value="1841">Recife/PE · 1841</option>
+              <option value="2287">Manaus/AM · 2287</option>
+              <option value="2828">Belém/PA · 2828</option>
+              <option value="1521">Florianópolis/SC · 1521</option>
+              <option value="1252">Vitória/ES · 1252</option>
+              <option value="1487">Goiânia/GO · 1487</option>
+              <option value="1469">Campo Grande/MS · 1469</option>
+              <option value="1366">Cuiabá/MT · 1366</option>
+              <option value="1693">João Pessoa/PB · 1693</option>
+              <option value="1658">Maceió/AL · 1658</option>
+              <option value="1465">Natal/RN · 1465</option>
+              <option value="1590">Aracaju/SE · 1590</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="sys-card">
+        <div class="sys-head"><span class="sys-name"><span class="sys-dot" style="background:#9A8F7C"></span>Tarifas locais</span></div>
+        <div class="sys-body">
+          <div class="sys-input">
+            <label>Tarifa de água + esgoto</label>
+            <div><input type="number" id="i-tar-w" value="7" min="0" step="0.5"><span class="unit">R$/m³</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Tarifa de energia elétrica</label>
+            <div><input type="number" id="i-tar-e" value="0.76" min="0" step="0.05"><span class="unit">R$/kWh</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Preço da gasolina</label>
+            <div><input type="number" id="i-tar-g" value="6.20" min="0" step="0.10"><span class="unit">R$/L</span></div>
+          </div>
+          <div class="sys-input">
+            <label>Fator emissão da rede elétrica</label>
+            <div><input type="number" id="i-fat-co2" value="0.0385" min="0" step="0.001"><span class="unit">kgCO₂/kWh · MCTI</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3D LAYOUT -->
+<div class="layout">
+  <div>
+    <canvas id="bld"></canvas>
+    <p class="hint">Arraste para girar · Passe o mouse nos sistemas para destacar</p>
+  </div>
+  <div class="menu">
+    <p class="cat">Sistemas Sustentáveis</p>
+    <button class="sb" data-s="solar" style="--c:#D4A547">Energia Fotovoltaica</button>
+    <button class="sb" data-s="grey" style="--c:#A89A7A">Reuso de Águas Cinzas</button>
+    <button class="sb" data-s="water" style="--c:#5C9BB5">Reuso de Águas Pluviais</button>
+    <button class="sb" data-s="irrigation" style="--c:#6B8E4E">Irrigação Eficiente</button>
+    <p class="cat">Desempenho</p>
+    <button class="sb" data-s="thermal" style="--c:#C9694D">Térmico</button>
+    <button class="sb" data-s="acoustic" style="--c:#7E6CA8">Acústico</button>
+    <button class="sb" data-s="luminic" style="--c:#E8C547">Lumínico</button>
+    <p class="cat">Implantação</p>
+    <button class="sb" data-s="solarchart" style="--c:#E8B85C">Carta Solar</button>
+    <button class="sb" data-s="natives" style="--c:#5A8541">Espécies Nativas</button>
+    <button class="sb" data-s="exotics" style="--c:#B58A4A">Espécies Exóticas</button>
+    <button class="sb" data-s="invasives" style="--c:#9B5A8A">Espécies Invasoras</button>
+  </div>
+</div>
+<div class="info" id="info">Conjunto residencial paramétrico. Ajuste o número de unidades acima e veja a volumetria reagir.</div>
+
+<!-- LIVE DASHBOARD -->
+<div class="dash">
+  <div class="dash-head">
+    <div>
+      <p class="dash-label">Indicadores GBC · NBR · LEED</p>
+      <h3 class="dash-h">Dashboard de desempenho calculado</h3>
+      <p class="dash-p">Cálculos em tempo real baseados nas normas brasileiras e referências GBC. Ajuste os parâmetros e veja os indicadores responderem.</p>
+    </div>
+    <div class="dash-time"><span class="dash-dot"></span><span style="font-style:italic">Cálculo dinâmico</span></div>
+  </div>
+  <div class="cards">
+
+    <!-- WATER CARD -->
+    <div class="card w">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#5C9BB5"></span><p class="card-t" style="color:#3D6B7E">Eficiência Hídrica</p></div><span class="card-tag" id="d-water-pct" style="color:#5C9BB5;background:rgba(92,155,181,.12)">−0%</span></div>
+      <p class="card-big"><span id="d-water-vol">0</span><span class="card-big-unit">m³/ano economizados</span></p>
+      <div style="margin-top:1rem;padding-top:.75rem;border-top:.5px solid rgba(92,155,181,.15);display:flex;flex-direction:column;gap:.45rem">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Equipamentos hidráulicos</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(92,155,181,.15);border-radius:2px;overflow:hidden"><div id="d-water-equip-bar" style="width:0%;height:100%;background:#5C9BB5"></div></div>
+            <span style="font-size:.68rem;color:#3D6B7E;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-water-equip">0%</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Captação pluvial</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(92,155,181,.15);border-radius:2px;overflow:hidden"><div id="d-water-rain-bar" style="width:0%;height:100%;background:#5C9BB5"></div></div>
+            <span style="font-size:.68rem;color:#3D6B7E;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-water-rain">0%</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Reuso de águas cinzas</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(92,155,181,.15);border-radius:2px;overflow:hidden"><div id="d-water-grey-bar" style="width:0%;height:100%;background:#5C9BB5"></div></div>
+            <span style="font-size:.68rem;color:#3D6B7E;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-water-grey">0%</span>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top:.7rem;margin-top:.7rem;border-top:.5px solid rgba(92,155,181,.15);display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#7A6F5C">Economia anual estimada</span><span style="font-size:.68rem;color:#3D6B7E;font-weight:500" id="d-water-money">R$ 0</span></div>
+    </div>
+
+    <!-- ENERGY CARD -->
+    <div class="card e">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#D4A547"></span><p class="card-t" style="color:#7A5A14">Eficiência Energética</p></div><span class="card-tag" id="d-energy-pct" style="color:#7A5A14;background:rgba(212,165,71,.15)">−0%</span></div>
+      <p class="card-big"><span id="d-energy-kwh">0</span><span class="card-big-unit">kWh/ano economizados</span></p>
+      <div style="margin-top:1rem;padding-top:.75rem;border-top:.5px solid rgba(212,165,71,.15);display:flex;flex-direction:column;gap:.45rem">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Geração fotovoltaica</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(212,165,71,.15);border-radius:2px;overflow:hidden"><div id="d-energy-pv-bar" style="width:0%;height:100%;background:#D4A547"></div></div>
+            <span style="font-size:.68rem;color:#7A5A14;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-energy-pv">0 kWh</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Elevador + bombas</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(212,165,71,.15);border-radius:2px;overflow:hidden"><div id="d-energy-elev-bar" style="width:0%;height:100%;background:#D4A547"></div></div>
+            <span style="font-size:.68rem;color:#7A5A14;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-energy-elev">0 kWh</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Climatização + iluminação</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(212,165,71,.15);border-radius:2px;overflow:hidden"><div id="d-energy-ac-bar" style="width:0%;height:100%;background:#D4A547"></div></div>
+            <span style="font-size:.68rem;color:#7A5A14;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-energy-ac">0 kWh</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:.72rem;color:#5A4F3C">Aquecimento de água</span>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <div style="width:60px;height:3px;background:rgba(212,165,71,.15);border-radius:2px;overflow:hidden"><div id="d-energy-heat-bar" style="width:0%;height:100%;background:#D4A547"></div></div>
+            <span style="font-size:.68rem;color:#7A5A14;font-variant-numeric:tabular-nums;min-width:34px;text-align:right" id="d-energy-heat">0 kWh</span>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top:.7rem;margin-top:.7rem;border-top:.5px solid rgba(212,165,71,.15);display:flex;justify-content:space-between"><span style="font-size:.68rem;color:#7A6F5C">Economia anual · CO₂ evitado</span><span style="font-size:.68rem;color:#7A5A14;font-weight:500"><span id="d-energy-money">R$ 0</span> · <span id="d-energy-co2">0</span> kgCO₂</span></div>
+    </div>
+
+  </div>
+
+  <!-- DASHBOARD ROW 2 - 3 cards -->
+  <div class="cards" style="margin-top:.875rem;grid-template-columns:1fr 1fr 1fr">
+
+    <!-- LANDSCAPING -->
+    <div class="card" style="border:.5px solid rgba(143,170,92,.3)">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#5A8541"></span><p class="card-t" style="color:#3D5C24">Paisagismo Nativo</p></div><span class="card-tag" id="d-pais-status" style="color:#5A8541;background:rgba(143,170,92,.15)">Atende GBC</span></div>
+      <div style="display:flex;justify-content:center;margin-bottom:.4rem">
+        <svg width="120" height="68" viewBox="0 0 140 78">
+          <path d="M 15 70 A 55 55 0 0 1 125 70" fill="none" stroke="rgba(143,170,92,.15)" stroke-width="8" stroke-linecap="round"/>
+          <path id="d-pais-arc" d="M 15 70 A 55 55 0 0 1 125 70" fill="none" stroke="#5A8541" stroke-width="8" stroke-linecap="round" stroke-dasharray="0 200"/>
+          <text x="70" y="56" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="22" fill="#3D352A"><tspan id="d-pais-pct">0%</tspan></text>
+          <text x="70" y="70" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="8" fill="#7A6F5C">espécies nativas</text>
+        </svg>
+      </div>
+      <div style="padding-top:.6rem;border-top:.5px solid rgba(143,170,92,.15);display:flex;flex-direction:column;gap:.4rem">
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">Área de paisagismo adequado</span><span style="font-size:.68rem;color:#3D5C24"><span id="d-pais-area">0</span> m²</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">Margem vs. mínimo GBC (40%)</span><span style="font-size:.68rem;color:#3D5C24" id="d-pais-margin">+0%</span></div>
+      </div>
+    </div>
+
+    <!-- WALKABILITY -->
+    <div class="card" style="border:.5px solid rgba(126,108,168,.3)">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#7E6CA8"></span><p class="card-t" style="color:#4A3C72">Caminhabilidade</p></div><span class="card-tag" id="d-walk-class" style="color:#4A3C72;background:rgba(126,108,168,.15)">—</span></div>
+      <p class="card-big"><span id="d-walk-score">0</span><span class="card-big-unit">/ 100 Walkscore</span></p>
+      <div style="margin-top:.7rem;width:100%;height:5px;background:rgba(126,108,168,.15);border-radius:3px;overflow:hidden"><div id="d-walk-bar" style="width:0%;height:100%;background:#7E6CA8"></div></div>
+      <div style="margin-top:.9rem;padding-top:.6rem;border-top:.5px solid rgba(126,108,168,.15);display:flex;flex-direction:column;gap:.4rem">
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">Km evitados/mês/morador</span><span style="font-size:.68rem;color:#4A3C72"><span id="d-walk-km">0</span> km</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">Economia anual/morador</span><span style="font-size:.68rem;color:#4A3C72" id="d-walk-money">R$ 0</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">CO₂ evitado/ano/morador</span><span style="font-size:.68rem;color:#4A3C72"><span id="d-walk-co2">0</span> kg</span></div>
+      </div>
+    </div>
+
+    <!-- WASTE -->
+    <div class="card" style="border:.5px solid rgba(139,122,78,.3)">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#8B7A4E"></span><p class="card-t" style="color:#5A4D2E">Resíduos de Obra</p></div><span class="card-tag" style="color:#5A4D2E;background:rgba(139,122,78,.15)">PGRCC</span></div>
+      <p class="card-big"><span id="d-res-vol">0</span><span class="card-big-unit">m³ desviados de aterro</span></p>
+      <div style="margin-top:.7rem;width:100%;height:5px;background:rgba(139,122,78,.15);border-radius:3px;overflow:hidden"><div id="d-res-bar" style="width:0%;height:100%;background:#8B7A4E"></div></div>
+      <div style="margin-top:.9rem;padding-top:.6rem;border-top:.5px solid rgba(139,122,78,.15);display:flex;flex-direction:column;gap:.4rem">
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">Equivalente em caçambas</span><span style="font-size:.68rem;color:#5A4D2E"><span id="d-res-cacambas">0</span> un</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">Equivalente em caminhões-baú</span><span style="font-size:.68rem;color:#5A4D2E"><span id="d-res-caminhoes">0</span> un</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:.7rem;color:#5A4F3C">tCO₂ evitados</span><span style="font-size:.68rem;color:#5A4D2E"><span id="d-res-co2">0</span> t</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DASHBOARD ROW 3 - Conforto -->
+  <div class="cards" style="margin-top:.875rem;grid-template-columns:1fr 1fr">
+
+    <!-- THERMAL COMFORT -->
+    <div class="card" style="border:.5px solid rgba(201,105,77,.3)">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#C9694D"></span><p class="card-t" style="color:#7C3F2C">Conforto Térmico</p></div><span class="card-tag" style="color:#7C3F2C;background:rgba(201,105,77,.15)">Simulação</span></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.4rem">
+        <div>
+          <p style="font-size:.65rem;color:#7A6F5C;margin-bottom:.2rem">Redução do uso de AC</p>
+          <p style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:#3D352A;line-height:1;margin:0" id="d-th-ac">0%</p>
+        </div>
+        <div>
+          <p style="font-size:.65rem;color:#7A6F5C;margin-bottom:.2rem">% do ano com AC ativo</p>
+          <p style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:#3D352A;line-height:1;margin:0" id="d-th-active">0%</p>
+        </div>
+        <div>
+          <p style="font-size:.65rem;color:#7A6F5C;margin-bottom:.2rem">Estabilidade vs. externa</p>
+          <p style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:#3D352A;line-height:1;margin:0" id="d-th-stab">0%</p>
+        </div>
+        <div>
+          <p style="font-size:.65rem;color:#7A6F5C;margin-bottom:.2rem">Variação interna</p>
+          <p style="font-family:'DM Serif Display',serif;font-size:1.5rem;color:#3D352A;line-height:1;margin:0" id="d-th-range">± 0°C</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LUMINIC COMFORT -->
+    <div class="card" style="border:.5px solid rgba(232,197,71,.4)">
+      <div class="card-h"><div class="card-l"><span class="card-d" style="background:#E8C547"></span><p class="card-t" style="color:#7A6314">Conforto Lumínico</p></div><span class="card-tag" style="color:#7A6314;background:rgba(232,197,71,.18)">NBR 15.575</span></div>
+      <div style="display:flex;flex-direction:column;gap:.55rem;margin-top:.4rem">
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:.2rem"><span style="font-size:.72rem;color:#5A4F3C">Desempenho superior</span><span style="font-size:.68rem;color:#7A6314" id="d-lm-sup">0%</span></div>
+          <div style="width:100%;height:5px;background:rgba(232,197,71,.18);border-radius:3px;overflow:hidden"><div id="d-lm-sup-bar" style="width:0%;height:100%;background:#E8C547"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:.2rem"><span style="font-size:.72rem;color:#5A4F3C">Intermediário</span><span style="font-size:.68rem;color:#7A6314" id="d-lm-int">0%</span></div>
+          <div style="width:100%;height:5px;background:rgba(232,197,71,.18);border-radius:3px;overflow:hidden"><div id="d-lm-int-bar" style="width:0%;height:100%;background:#D4B040"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:.2rem"><span style="font-size:.72rem;color:#5A4F3C">Mínimo</span><span style="font-size:.68rem;color:#7A6314" id="d-lm-min">0%</span></div>
+          <div style="width:100%;height:5px;background:rgba(232,197,71,.18);border-radius:3px;overflow:hidden"><div id="d-lm-min-bar" style="width:0%;height:100%;background:#B59838"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
 </section>
 
-<!-- COMPETÊNCIAS -->
-<section id="competencias" style="background:var(--bg)">
-  <div class="container">
-    <p class="sec-label">Competências</p>
-    <h2>Ferramentas &<br>conhecimentos</h2>
-    <div class="sk-grid">
-      <div class="sk-group"><div class="sk-title">Sustentabilidade & ESG</div><div class="sk-item">Certificações LEED</div><div class="sk-item">Gestão de emissões GEE</div><div class="sk-item">Eficiência energética</div><div class="sk-item">Auditoria e conformidade</div><div class="sk-item">Estratégia ESG corporativa</div></div>
-      <div class="sk-group"><div class="sk-title">Tecnologia & IA</div><div class="sk-item">Google AI Studio (vibe-code)</div><div class="sk-item">Python · VBA · Macros Excel</div><div class="sk-item">Automação de processos</div><div class="sk-item">GitHub</div><div class="sk-item">CRM Pipedrive</div></div>
-      <div class="sk-group"><div class="sk-title">Engenharia & BIM</div><div class="sk-item">Autodesk Revit (avançado)</div><div class="sk-item">Autodesk Navisworks</div><div class="sk-item">BIM 5D · SINAPI</div><div class="sk-item">Gestão de obras</div><div class="sk-item">Inglês avançado</div></div>
-      <div class="cert-bar"><div style="display:flex;align-items:center;gap:.875rem"><div class="cert-ico">L</div><div><div class="cert-name">LEED Green Associate</div><div class="cert-org">U.S. Green Building Council (USGBC)</div></div></div><span class="cert-badge">Certificação Internacional</span></div>
-    </div>
+<!-- POSTS -->
+<section class="section" id="posts">
+  <div class="section-head">
+    <p class="section-label">Publicações & Reflexões</p>
+    <h2>Bastidores, projetos e <em>provocações</em> sobre ESG.</h2>
+    <p class="section-lead">Espaço para compartilhar projetos, aprendizados e provocações sobre o futuro da consultoria em sustentabilidade. Em breve, postagens regulares.</p>
+  </div>
+  <div class="posts-grid">
+    <!-- POST 1 -->
+    <article class="post-card" onclick="alert('Conteúdo a ser desenvolvido em breve.')">
+      <div class="post-img"><span class="post-img-icon">01</span></div>
+      <div class="post-body">
+        <p class="post-tag">Caso técnico · LEED</p>
+        <h3 class="post-title">Coordenando 50+ certificações LEED simultaneamente</h3>
+        <p class="post-excerpt">O processo de gestão de portfólio na Forte Desenvolvimento Sustentável: como mantemos 100% de conformidade em auditorias com clientes como GT Building, AG7 e Tishman Speyer.</p>
+        <div class="post-meta"><span>Em breve</span><span>Leitura · 6 min</span></div>
+      </div>
+    </article>
+
+    <!-- POST 2 -->
+    <article class="post-card" onclick="alert('Conteúdo a ser desenvolvido em breve.')">
+      <div class="post-img"><span class="post-img-icon">02</span></div>
+      <div class="post-body">
+        <p class="post-tag">Plataforma · IA Aplicada</p>
+        <h3 class="post-title">Da planilha à plataforma — automatizando análises bioclimáticas</h3>
+        <p class="post-excerpt">A jornada de construção de uma ferramenta com IA que reduz uma análise de 2 horas para menos de 3 minutos. Decisões técnicas, vibe-coding com Google AI Studio, e os tradeoffs no caminho.</p>
+        <div class="post-meta"><span>Em breve</span><span>Leitura · 8 min</span></div>
+      </div>
+    </article>
+
+    <!-- POST 3 -->
+    <article class="post-card" onclick="alert('Conteúdo a ser desenvolvido em breve.')">
+      <div class="post-img"><span class="post-img-icon">03</span></div>
+      <div class="post-body">
+        <p class="post-tag">Paisagismo · Biodiversidade</p>
+        <h3 class="post-title">Classificação automática de espécies vegetais por geolocalização</h3>
+        <p class="post-excerpt">Como ensinamos a plataforma a identificar espécies nativas, exóticas e invasoras em projetos de paisagismo conforme a região do empreendimento. Aplicação prática para créditos GBC.</p>
+        <div class="post-meta"><span>Em breve</span><span>Leitura · 7 min</span></div>
+      </div>
+    </article>
+
+    <!-- POST 4 -->
+    <article class="post-card" onclick="alert('Conteúdo a ser desenvolvido em breve.')">
+      <div class="post-img"><span class="post-img-icon">04</span></div>
+      <div class="post-body">
+        <p class="post-tag">Provocação · Setor</p>
+        <h3 class="post-title">O futuro da consultoria ESG é menos planilha, mais raciocínio</h3>
+        <p class="post-excerpt">Reflexão sobre por que tanto tempo se gasta em coleta manual de dados no setor de sustentabilidade — e o que precisamos construir para que o consultor volte a focar no problema, não no formulário.</p>
+        <div class="post-meta"><span>Em breve</span><span>Leitura · 5 min</span></div>
+      </div>
+    </article>
+
+    <!-- POST 5 -->
+    <article class="post-card" onclick="alert('Conteúdo a ser desenvolvido em breve.')">
+      <div class="post-img"><span class="post-img-icon">05</span></div>
+      <div class="post-body">
+        <p class="post-tag">Indicadores GBC</p>
+        <h3 class="post-title">Calculadora de indicadores: água, energia e carbono integrados</h3>
+        <p class="post-excerpt">Como construí um motor de cálculo que aplica fórmulas NBR e ASHRAE 90.1 para gerar indicadores de eficiência hídrica, energética e ambiental em condomínios verticais — e por que precisa ser open source.</p>
+        <div class="post-meta"><span>Em breve</span><span>Leitura · 9 min</span></div>
+      </div>
+    </article>
+
+    <!-- POST 6 — placeholder genérico -->
+    <article class="post-card" onclick="alert('Espaço aberto para novas publicações.')">
+      <div class="post-img" style="background:linear-gradient(135deg,rgba(122,111,92,.15),rgba(232,184,92,.1))"><span class="post-img-icon" style="color:rgba(122,111,92,.4)">+</span></div>
+      <div class="post-body">
+        <p class="post-tag">Próximo capítulo</p>
+        <h3 class="post-title">Espaço para novas publicações</h3>
+        <p class="post-excerpt">Esta seção crescerá conforme novos projetos, casos técnicos e reflexões forem documentados. Volte em breve para acompanhar.</p>
+        <div class="post-meta"><span>Em desenvolvimento</span><span>—</span></div>
+      </div>
+    </article>
   </div>
 </section>
 
 <!-- CONTATO -->
-<section id="contato">
-  <div class="container">
-    <p class="sec-label" style="justify-content:center;color:#4ADE80"><span style="display:block;width:18px;height:1px;background:#4ADE80"></span>Contato</p>
-    <h2>Vamos conversar?</h2>
-    <p class="cont-sub">Aberto a oportunidades em ESG, inovação e tecnologia aplicada à sustentabilidade.</p>
-    <div class="cont-links">
-      <a href="mailto:rafael.avila.janz@hotmail.com" class="cont-link">✉ E-mail</a>
-      <a href="https://linkedin.com/in/rafaelavila-janz" target="_blank" class="cont-link">in LinkedIn</a>
-      <a href="https://github.com/rafael-janz" target="_blank" class="cont-link">{ } GitHub</a>
-      <a href="#" class="cont-link dl">↓ Baixar currículo</a>
+<section class="section" id="contato">
+  <div class="section-head">
+    <p class="section-label">Contato</p>
+    <h2>Vamos conversar sobre <em>sustentabilidade e tecnologia</em>.</h2>
+    <p class="section-lead">Aberto a oportunidades de inovação em ESG, parcerias técnicas em projetos de certificação ou trocas sobre como IA pode transformar a consultoria em sustentabilidade.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <p class="contact-label">Direto</p>
+      <p class="contact-line"><a href="mailto:rafael.avila.janz@hotmail.com" class="contact-link">rafael.avila.janz@hotmail.com</a></p>
+      <p class="contact-label">Telefone</p>
+      <p class="contact-line">(41) 9 9151-2323</p>
+      <p class="contact-label">Localização</p>
+      <p class="contact-line" style="margin-bottom:0">Curitiba · Paraná · Brasil</p>
     </div>
-    <div class="blog-soon"><strong>Em breve:</strong> artigos sobre ESG, inovação e o que aprendo desenvolvendo ferramentas com IA para o setor de sustentabilidade.</div>
+    <div class="contact-card">
+      <p class="contact-label">Redes</p>
+      <p class="contact-line"><a href="https://linkedin.com/in/rafaelavila-janz" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/rafaelavila-janz</a></p>
+      <p class="contact-label">Repositório</p>
+      <p class="contact-line"><a href="https://github.com/rafaeljanz" target="_blank" rel="noopener" class="contact-link">github.com/rafaeljanz</a></p>
+      <p class="contact-label">Atuação atual</p>
+      <p class="contact-line" style="margin-bottom:0">Coordenador · Forte Desenvolvimento Sustentável</p>
+    </div>
   </div>
 </section>
-<footer><p>Rafael Ávila Janz · Curitiba, PR · 2025</p></footer>
 
-<!-- THREE.JS -->
+<footer>
+  <p class="foot-text">© 2025 <span class="foot-name">Rafael Ávila Janz</span> · Engenharia, sustentabilidade e código.</p>
+  <p class="foot-text" style="margin-top:.4rem;font-size:.7rem">Construído à mão, com DM Serif Display & DM Sans.</p>
+</footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// ── PROJECTS DATA ─────────────────────────────────────────
-const PROJECTS=[
-  {tags:["gbc casa"],client:"Polaris",name:"Residencial Polaris"},
-  {tags:["gbc casa"],client:"Salinet",name:"Residencial Salinet"},
-  {tags:["gbc condomínio"],client:"Quest",name:"Piazza San Marino"},
-  {tags:["gbc condomínio"],client:"Valor Real",name:"Park Royale"},
-  {tags:["gbc condomínio"],client:"Floresta Incorporadora",name:"Floresta Alta Vista"},
-  {tags:["leed"],client:"Cidade dos Lagos",name:"Cilla Tower"},
-  {tags:["leed"],client:"Cidade dos Lagos",name:"Hospital São Vicente"},
-  {tags:["fitwel"],client:"Gafisa",name:"Canto Mar e Canto Rio"},
-  {tags:["fitwel"],client:"TECNA",name:"Odontoclínica"},
-  {tags:["leed"],client:"FINDES",name:"SESI Araças"},
-  {tags:["leed"],client:"FINDES",name:"SESI Linhares"},
-  {tags:["leed"],client:"Viposa",name:"Fábrica de EPI's"},
-  {tags:["leed"],client:"FINDES",name:"SESI Cachoeiro"},
-  {tags:["leed"],client:"FIEP",name:"Escola de Referência Maringá"},
-  {tags:["leed"],client:"Level",name:"Garden Sports"},
-  {tags:["other"],client:"Vokkan",name:"Navegantes"},
-  {tags:["gbc condomínio"],client:"Evo Evolução Urbana",name:"Talent"},
-  {tags:["fitwel","gbc condomínio"],client:"GT Building",name:"Atlân"},
-  {tags:["gbc condomínio","leed"],client:"Séren",name:"Sagô"},
-  {tags:["gbc condomínio"],client:"BOS",name:"Place 757"},
-  {tags:["gbc condomínio"],client:"MDGP",name:"Amira (DG5)"},
-  {tags:["gbc condomínio"],client:"JN",name:"Casa Batel"},
-  {tags:["gbc casa"],client:"Investcorp (Halsten)",name:"Residencial Investcorp"},
-  {tags:["gbc condomínio"],client:"Torresani",name:"Vista Jardins"},
-  {tags:["gbc condomínio"],client:"Prima",name:"Sublime Horto House"},
-  {tags:["edge"],client:"Embaixada da Itália",name:"Retrofit Embaixada da Itália"},
-  {tags:["leed"],client:"FIEP",name:"Escola de Referência Cascavel"},
-  {tags:["leed"],client:"Vectra",name:"Sede Construtora Vectra"},
-  {tags:["fitwel","gbc condomínio"],client:"GT Building",name:"Amáz"},
-  {tags:["edge"],client:"MRM",name:"Veríssimo"},
-  {tags:["gbc condomínio"],client:"FG",name:"Scenarium"},
-  {tags:["gbc condomínio"],client:"AG7",name:"Pace"},
-  {tags:["leed"],client:"FIEP",name:"Nova Unidade SENAI CSC"},
-  {tags:["zero carbono"],client:"GT Building",name:"Línea (Explore República)"},
-  {tags:["zero carbono"],client:"GT Building",name:"Círculo Militar"},
-  {tags:["zero carbono"],client:"GT Building",name:"Eco II"},
-  {tags:["gbc condomínio"],client:"Famex",name:"Ventura (Inc 07)"},
-  {tags:["fitwel","gbc condomínio","leed","zero carbono"],client:"GT Building",name:"Oás"},
-  {tags:["fitwel","gbc condomínio"],client:"Triad",name:"Twenty-Five"},
-  {tags:["gbc condomínio"],client:"Sunprime",name:"Era"},
-  {tags:["gbc condomínio"],client:"CN",name:"Brava Ocean"},
-  {tags:["gbc condomínio"],client:"Torresani",name:"Vértice"},
-  {tags:["gbc condomínio"],client:"MDGP",name:"Chácara Kantuá (DG4)"},
-  {tags:["gbc condomínio"],client:"Investcorp (Halsten)",name:"Arium (Cidade das Águas)"},
-  {tags:["fitwel","gbc condomínio"],client:"ABC Empreendimentos",name:"Ená (Estaleiro)"},
-  {tags:["gbc condomínio"],client:"JN",name:"Carmelo 180"},
-  {tags:["leed"],client:"GND",name:"HRAS"},
-  {tags:["leed"],client:"City Soluções Urbanas",name:"Infinity (Comercial 85)"},
-  {tags:["leed"],client:"Fundepar",name:"Escola Jardim Holandês"},
-  {tags:["leed"],client:"Marista",name:"Colégio Marista"},
-  {tags:["leed"],client:"GND",name:"HCO"},
-  {tags:["leed"],client:"City Soluções Urbanas",name:"City 29"},
-  {tags:["gbc condomínio"],client:"Telesil",name:"Sitges"},
-  {tags:["edge","fitwel"],client:"GT Building",name:"Turin (Slaviero)"},
-  {tags:["edge","fitwel"],client:"GT Building",name:"Lange (Desembargador Motta)"},
-  {tags:["active score","edge","fitwel"],client:"GT Building",name:"The Pineyards (João Américo)"},
-  {tags:["gbc condomínio"],client:"Torresani",name:"Voz (Inc 23)"},
-  {tags:["fitwel"],client:"Dall Empreendimentos",name:"Atmosphere Home Spa (Brava)"},
-  {tags:["leed"],client:"Electrolux",name:"Refeitório - ELX"},
-  {tags:["leed"],client:"FIEP",name:"Escola de Referência Guarapuava"},
-  {tags:["leed"],client:"Invescon",name:"Centro de Distribuição SJP"},
-  {tags:["gbc condomínio"],client:"Grupo Saes",name:"Arbo 1755"},
-  {tags:["gbc condomínio"],client:"Grupo Saes",name:"Baumhaus"},
-  {tags:["gbc condomínio","leed"],client:"Saraiva de Rezende",name:"Square Life"},
-  {tags:["gbc condomínio","leed"],client:"Sunprime",name:"Futura"},
-  {tags:["gbc condomínio"],client:"Kirchner Empreendimentos",name:"West Village"},
-  {tags:["gbc condomínio"],client:"Sunprime",name:"Sion"},
-  {tags:["gbc condomínio"],client:"Sunprime",name:"Orgânica"},
-  {tags:["gbc condomínio"],client:"Famex",name:"Vitta 27"},
-  {tags:["leed"],client:"Electrolux",name:"Produção - ELX"},
-  {tags:["leed"],client:"LOFT",name:"Infinity (Level Corporate)"},
-  {tags:["leed"],client:"Gran Paradiso",name:"Gran Paradiso Hotel"},
-  {tags:["leed"],client:"Invescon",name:"Batel Corporate"},
-  {tags:["leed"],client:"Electrolux",name:"Prédio de Acesso - ELX"},
-  {tags:["leed"],client:"Belmondo",name:"Centro Histórico"},
-  {tags:["leed"],client:"GND",name:"HRE"},
-  {tags:["leed","well"],client:"CP8 Empreendimentos",name:"Edifício Distintto"},
-  {tags:["gbc condomínio"],client:"Grupo Saes",name:"Sense Mare"},
-  {tags:["gbc condomínio"],client:"Grupo Saes",name:"Cityzen"},
-  {tags:["gbc condomínio"],client:"Grupo Saes",name:"Biodivine"},
-  {tags:["gbc condomínio"],client:"Grupo N1",name:"Vision Home Club (INC 13)"},
-  {tags:["leed"],client:"PZ Empreendimentos",name:"Parque SINOP"},
-  {tags:["leed","well"],client:"Adventista",name:"Colégio Adventista Balneário Camburiú"},
-  {tags:["leed"],client:"Level",name:"Level Padel"},
-  {tags:["fitwel"],client:"Nazca",name:"Barro Vermelho"},
-  {tags:["gbc condomínio"],client:"RDO",name:"INC 12"},
-  {tags:["leed"],client:"Vokkan",name:"Loja Conceito"},
-  {tags:["leed"],client:"Wolbito",name:"Biofábrica CE"},
-  {tags:["gbc condomínio"],client:"AS Ramos",name:"Reserva Estaleiro"},
-  {tags:["gbc condomínio"],client:"AS Ramos",name:"INC 31"},
-  {tags:["leed"],client:"PrimePet",name:"Fábrica PrimePet"},
-  {tags:["gbc condomínio"],client:"Orla",name:"INC 36"},
-  {tags:["leed"],client:"Grupo Saes",name:"Ciway 470"},
-  {tags:["fitwel","zero carbono"],client:"GT Building",name:"Casa Jobim"},
-  {tags:["gbc condomínio"],client:"Andraus",name:"INC 35"},
-  {tags:["gbc condomínio"],client:"Teerra",name:"Zenna"},
-  {tags:["gbc condomínio"],client:"Bairru",name:"INC B1"},
-  {tags:["leed"],client:"FIEP",name:"Nova Unidade SENAI FB"},
-  {tags:["gbc condomínio"],client:"Atello",name:"Parque (Travessa Novembro)"},
-  {tags:["leed"],client:"Vokkan",name:"Cond. Logístico"},
-  {tags:["leed"],client:"PUCPR",name:"Centro Integrado de Saúde"},
-  {tags:["leed"],client:"SESC",name:"Unidade Centro do Departamento Nacional"},
-  {tags:["leed"],client:"Haacke",name:"Horizon"},
-  {tags:["leed"],client:"Valmet",name:"Fábrica Valmet"},
-  {tags:["edge","leed"],client:"City Soluções Urbanas",name:"City 32"},
-  {tags:["leed"],client:"PUCPR",name:"Bloco Azul"},
-  {tags:["gbc condomínio","zero carbono"],client:"GT Building",name:"Prainha"},
-  {tags:["fitwel"],client:"ABC Empreendimentos",name:"Refuge"},
-  {tags:["fitwel"],client:"Nazca",name:"Aleixo"},
-  {tags:["leed"],client:"GIS Brasil",name:"Tetra Pak PG"},
-  {tags:["leed"],client:"M Dias Branco",name:"Bloco Social Isabela"},
-  {tags:["gbc condomínio"],client:"Marfres",name:"Cidade Jardim"},
-  {tags:["zero carbono"],client:"GT Building",name:"Sete"},
-  {tags:["fitwel"],client:"Nazca",name:"Luzimar"},
-];
+const cv=document.getElementById('bld');
+let W=cv.parentElement.offsetWidth;
+const r=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+r.setSize(W,580,false);r.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const sc=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(32,W/580,.1,500);
+sc.add(new THREE.AmbientLight(0xfff5e6,1));
 
-// TAG CONFIG
-const TAG_CFG={
-  "leed":{label:"LEED",cls:"leed"},
-  "gbc condomínio":{label:"GBC Cond.",cls:"gbc"},
-  "gbc casa":{label:"GBC Casa",cls:"gbc"},
-  "fitwel":{label:"Fitwel",cls:"fitwel"},
-  "edge":{label:"EDGE",cls:"edge"},
-  "zero carbono":{label:"Zero Carbono",cls:"zero"},
-  "well":{label:"WELL",cls:"well"},
-  "active score":{label:"Active Score",cls:"active"},
-  "other":{label:"Outros",cls:"other"},
+const C={
+  base:0x9A8F7C,balc:0x7A6F5C,attic:0x6B5D4A,
+  solarF:0xD4A547,solarH:0xE8B85C,
+  waterF:0x9BB8C5,waterH:0x4A8FAA,
+  greyF:0xC2B89C,greyH:0x8B7A4E,
+  greenF:0xA8B89A,greenH:0x5A8541,
+  nativeF:0xA8C49A,nativeH:0x5A8541,
+  exoticF:0xD9C09A,exoticH:0xB58A4A,
+  invasiveF:0xCFA8C2,invasiveH:0x9B5A8A,
+  thermalF:0xD9A89A,thermalH:0xC9694D,
+  acousticF:0xB5ABCC,acousticH:0x7E6CA8,
+  luminicF:0xEDD89A,luminicH:0xE8C547,
+  sun:0xE8B85C,court:0x8B6B4A,pool:0x7AA8C9
 };
 
-// Count by tag
-const tagCounts={};
-PROJECTS.forEach(p=>p.tags.forEach(t=>{tagCounts[t]=(tagCounts[t]||0)+1}));
+const wb=(w,h,d,c,o=1)=>new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(w,h,d)),new THREE.LineBasicMaterial({color:c,transparent:true,opacity:o}));
+const wcyl=(rt,rb,h,c,o=1,s=8)=>new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.CylinderGeometry(rt,rb,h,s)),new THREE.LineBasicMaterial({color:c,transparent:true,opacity:o}));
+const ll=(p1,p2,c,o=1)=>new THREE.Line(new THREE.BufferGeometry().setFromPoints([p1,p2]),new THREE.LineBasicMaterial({color:c,transparent:true,opacity:o}));
+const tag=(o,fo,ho,fc,hc)=>{o.userData.fo=fo;o.userData.ho=ho;o.userData.fc=fc;o.userData.hc=hc};
 
-// Build filters
-const filterBar=document.getElementById('filter-bar');
-let activeFilter='all';
-const allBtn=document.createElement('button');
-allBtn.className='filt-btn on';
-allBtn.innerHTML=`Todos <span class="cnt">${PROJECTS.length}</span>`;
-allBtn.onclick=()=>setFilter('all',allBtn);
-filterBar.appendChild(allBtn);
+// ── ROOT GROUP — everything that depends on parameters ─
+let rootG=new THREE.Group();
+sc.add(rootG);
 
-Object.entries(TAG_CFG).forEach(([key,cfg])=>{
-  if(!tagCounts[key])return;
-  const btn=document.createElement('button');
-  btn.className=`filt-btn`;
-  btn.innerHTML=`<span class="ptag c-${cfg.cls}" style="font-size:.65rem;padding:.1rem .45rem;border-radius:8px">${cfg.label}</span> <span class="cnt">${tagCounts[key]}</span>`;
-  btn.onclick=()=>setFilter(key,btn);
-  filterBar.appendChild(btn);
-});
+// Permanent groups (refs assigned per build)
+let solarG,condG,waterG,greyG,irrG,thG,acG,lmG,chartG,nativeG,exoticG,invasiveG,domeG;
+let domeRadius = 12;
 
-function setFilter(key,btn){
-  activeFilter=key;
-  document.querySelectorAll('.filt-btn').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  let shown=0;
-  document.querySelectorAll('.proj-card').forEach(c=>{
-    const match=key==='all'||c.dataset.tags.includes(key);
-    c.classList.toggle('hide',!match);
-    if(match)shown++;
-  });
-  document.getElementById('stat-filtered').textContent=shown;
+// Camera setup
+let drag=false,px=0,py=0,th=Math.atan2(20,22),ph=1.05;
+let CAM_RAD=Math.sqrt(20*20+14*14+22*22);
+let camTarget=new THREE.Vector3(0,5.5,0);
+function updateCam(){
+  cam.position.set(CAM_RAD*Math.sin(ph)*Math.sin(th),CAM_RAD*Math.cos(ph)+4,CAM_RAD*Math.sin(ph)*Math.cos(th));
+  cam.lookAt(camTarget);
 }
 
-// Build project grid
-const grid=document.getElementById('port-grid');
-PROJECTS.forEach(p=>{
-  const card=document.createElement('div');
-  const primaryTag=p.tags[0];
-  const cfg=TAG_CFG[primaryTag]||TAG_CFG['other'];
-  card.className=`proj-card pc-${cfg.cls}`;
-  card.dataset.tags=p.tags.join(' ');
-  card.innerHTML=`<div class="proj-name">${p.name}</div><div class="proj-client">${p.client}</div><div class="proj-tags">${p.tags.map(t=>`<span class="ptag c-${TAG_CFG[t]?.cls||'other'}">${TAG_CFG[t]?.label||t}</span>`).join('')}</div>`;
-  grid.appendChild(card);
-});
-document.getElementById('stat-total').textContent=PROJECTS.length;
-document.getElementById('stat-filtered').textContent=PROJECTS.length;
-
-// ── THREE.JS BUILDING ─────────────────────────────────────
-const SYS_DETAILS={
-  solar:"Painéis fotovoltaicos no telhado geram energia limpa in-loco, reduzindo o consumo da rede e contribuindo para créditos de energia renovável nas certificações LEED e GBC.",
-  water:"Sistema de captação de águas pluviais e reuso de efluentes tratados. Pode reduzir em até 40% o consumo de água potável — crédito essencial em projetos GBC e LEED.",
-  green:"Espécies nativas integradas ao projeto de paisagismo reduzem irrigação, suportam biodiversidade local e contribuem para créditos de GBC Biodiversidade e LEED Sustainable Sites.",
-  shell:"Envoltória com vidros de baixa emissividade, isolamento térmico e proteções solares reduzem a carga de ar-condicionado em até 30%, impactando diretamente a eficiência energética.",
-  wind:"Aberturas estratégicas e geometria do edifício potencializam a ventilação cruzada natural, reduzindo dependência de sistemas mecânicos e melhorando conforto térmico.",
-  led:"Sistema de iluminação LED com sensores de presença e aproveitamento de luz natural pode reduzir o consumo elétrico em iluminação em até 60%.",
-};
-
-let activeSys='solar';
-function selectSys(btn,sys){
-  document.querySelectorAll('.sys-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  activeSys=sys;
-  document.getElementById('sys-text').textContent=SYS_DETAILS[sys];
-  updateHighlight(sys);
-}
-
-const canvas=document.getElementById('three-canvas');
-const W=canvas.parentElement.offsetWidth||600,H=480;
-canvas.width=W;canvas.height=H;
-
-const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
-renderer.setSize(W,H);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-renderer.shadowMap.enabled=true;
-
-const scene=new THREE.Scene();
-const camera=new THREE.PerspectiveCamera(42,W/H,.1,100);
-camera.position.set(8,7,9);
-camera.lookAt(0,1.5,0);
-
-// Lighting
-const amb=new THREE.AmbientLight(0xffffff,.6);
-scene.add(amb);
-const dir=new THREE.DirectionalLight(0xffffff,.9);
-dir.position.set(6,10,6);
-dir.castShadow=true;
-scene.add(dir);
-const fill=new THREE.DirectionalLight(0x8ecfff,.3);
-fill.position.set(-4,3,-3);
-scene.add(fill);
-
-// Materials
-const MAT={
-  base:new THREE.MeshLambertMaterial({color:0xE8E4DC}),
-  facade:new THREE.MeshLambertMaterial({color:0xD4D0C8}),
-  glass:new THREE.MeshLambertMaterial({color:0x8BB8D4,transparent:true,opacity:.55}),
-  roof:new THREE.MeshLambertMaterial({color:0xC8C4BC}),
-  ground:new THREE.MeshLambertMaterial({color:0x4A7C59}),
-  solar:new THREE.MeshLambertMaterial({color:0x2C5F8A}),
-  water:new THREE.MeshLambertMaterial({color:0x3A8CC1}),
-  green:new THREE.MeshLambertMaterial({color:0x2D6A30}),
-  ledLight:new THREE.MeshLambertMaterial({color:0xFFE87A,transparent:true,opacity:.7}),
-  shell_hl:new THREE.MeshLambertMaterial({color:0xE8B86D,transparent:true,opacity:.6}),
-  wind_hl:new THREE.MeshLambertMaterial({color:0xA8D8F0,transparent:true,opacity:.6}),
-};
-
-const geo=(w,h,d)=>new THREE.BoxGeometry(w,h,d);
-const mesh=(g,m)=>{const me=new THREE.Mesh(g,m);me.castShadow=true;me.receiveShadow=true;return me};
-
-// Ground
-const gnd=mesh(geo(14,0.15,12),MAT.ground);
-gnd.position.set(0,-.075,0);
-scene.add(gnd);
-
-// Paths
-[[0,4.5],[0,-4.5],[4.5,0],[-4.5,0]].forEach(([x,z])=>{
-  const isX=Math.abs(x)>Math.abs(z);
-  const path=mesh(geo(isX?3:.5,0.05,isX?.5:3),new THREE.MeshLambertMaterial({color:0xD0C9BB}));
-  path.position.set(x,0.01,z);
-  scene.add(path);
-});
-
-// Building base — 3 floors
-const base=mesh(geo(5,3.6,4),MAT.base);
-base.position.set(0,1.8,0);
-scene.add(base);
-
-// Windows grid on front face
-for(let row=0;row<3;row++){
-  for(let col=0;col<3;col++){
-    const win=mesh(geo(.7,.8,.05),MAT.glass);
-    win.position.set(-1.1+col*1.1,0.7+row*1.1,2.03);
-    scene.add(win);
+// ── BUILD FUNCTION (parametric) ──────────────────────────
+function build(numTowers,floorsPerTower,unitsPerFloor){
+  // Clear root
+  while(rootG.children.length>0){
+    const c=rootG.children[0];
+    rootG.remove(c);
+    c.traverse(o=>{
+      if(o.geometry)o.geometry.dispose();
+      if(o.material)o.material.dispose();
+    });
   }
-}
-// Windows on sides
-for(let row=0;row<3;row++){
-  [-.8,.8].forEach(z=>{
-    const win=mesh(geo(.05,.8,.6),MAT.glass);
-    win.position.set(2.53,0.7+row*1.1,z);
-    scene.add(win);
-    const win2=mesh(geo(.05,.8,.6),MAT.glass);
-    win2.position.set(-2.53,0.7+row*1.1,z);
-    scene.add(win2);
-  });
-}
 
-// Tower top (4th floor setback)
-const tower=mesh(geo(3.5,1.4,2.8),MAT.facade);
-tower.position.set(.3,4.1,-.1);
-scene.add(tower);
+  // ── Tower dimensions based on units per floor ───────
+  // unitsPerFloor 1→2.0w, 8→4.5w
+  const W1 = 1.6 + (unitsPerFloor-1) * 0.4;
+  const D1 = 1.4 + (unitsPerFloor-1) * 0.18;
+  const FH = .78;
+  const bY = 1.2;
+  const sE = .35;
+  const atticH = 1.2;
 
-// Flat roof
-const rooftop=mesh(geo(5.2,.15,4.2),MAT.roof);
-rooftop.position.set(0,3.68,0);
-scene.add(rooftop);
-const towertop=mesh(geo(3.7,.12,3),MAT.roof);
-towertop.position.set(.3,4.82,-.1);
-scene.add(towertop);
+  // ── Tower spacing & matrix layout ───────────────────
+  // Distribute towers in a matrix as square as possible
+  const matrixCols = Math.ceil(Math.sqrt(numTowers));
+  const matrixRows = Math.ceil(numTowers / matrixCols);
+  const towerSpacingX = W1 + 2.6;
+  const towerSpacingZ = D1 + 3.2;
+  const totalSpanX = (matrixCols-1) * towerSpacingX;
+  const totalSpanZ = (matrixRows-1) * towerSpacingZ;
 
-// Parapet
-[[0,3.75,2.18],[0,3.75,-2.18],[2.68,3.75,0],[-2.68,3.75,0]].forEach(([x,y,z])=>{
-  const isZ=Math.abs(z)>Math.abs(x);
-  const par=mesh(geo(isZ?5.4:.15,.25,isZ?.15:4.4),MAT.roof);
-  par.position.set(x,y,z);
-  scene.add(par);
-});
+  // Terrain — adapts to keep as square as possible
+  const terrainW = Math.max(13, totalSpanX + W1 + 9);
+  const terrainD = Math.max(11, totalSpanZ + D1 + 8);
 
-// SOLAR PANELS group
-const solarGroup=new THREE.Group();
-for(let r=0;r<2;r++){
-  for(let c=0;c<3;c++){
-    const panel=mesh(geo(1.1,.05,.7),MAT.solar);
-    panel.position.set(-1.2+c*1.2,-.02,-0.8+r*.9);
-    solarGroup.add(panel);
+  // Tower height
+  const towerHeight = bY + .15 + floorsPerTower*FH + atticH + .2;
+
+  // Update camera to frame everything
+  CAM_RAD = Math.max(20, terrainW * 1.7);
+  camTarget.set(0, towerHeight*.45, 0);
+  updateCam();
+
+  // ── Ground ──────────────────────────────────────────
+  const gnd = wb(terrainW, .04, terrainD, C.base, .3);
+  gnd.position.set(0,-.02,0);
+  rootG.add(gnd);
+  for(let i=Math.floor(-terrainW/2)+1;i<terrainW/2;i+=2){
+    rootG.add(ll(new THREE.Vector3(i,0,-terrainD/2),new THREE.Vector3(i,0,terrainD/2),C.base,.1));
   }
-}
-solarGroup.position.set(.3,4.89,-.1);
-scene.add(solarGroup);
+  for(let i=-Math.floor(terrainD/2)+1;i<terrainD/2;i+=2){
+    rootG.add(ll(new THREE.Vector3(-terrainW/2,0,i),new THREE.Vector3(terrainW/2,0,i),C.base,.1));
+  }
 
-// WATER tank (rooftop)
-const waterGroup=new THREE.Group();
-const tank=mesh(new THREE.CylinderGeometry(.4,.4,.9,12),MAT.water);
-tank.position.set(0,0,0);
-waterGroup.add(tank);
-const tankLid=mesh(new THREE.CylinderGeometry(.42,.42,.06,12),new THREE.MeshLambertMaterial({color:0x2A6E99}));
-tankLid.position.set(0,.48,0);
-waterGroup.add(tankLid);
-waterGroup.position.set(-1.6,4.4,.3);
-scene.add(waterGroup);
+  // ── Build each tower (matrix layout) ────────────────
+  const towerInfos=[];
+  let tIdx=0;
+  for(let row=0;row<matrixRows;row++){
+    for(let col=0;col<matrixCols;col++){
+      if(tIdx>=numTowers)break;
+      const towerX = -totalSpanX/2 + col*towerSpacingX;
+      const towerZ = -totalSpanZ/2 + row*towerSpacingZ;
+      const tg=new THREE.Group();
+      rootG.add(tg);
+      tg.position.set(towerX,0,towerZ);
 
-// GREEN roof garden
-const greenGroup=new THREE.Group();
-[[-1,0,-1.2],[-1,0,.4],[.8,0,-.5],[.4,0,.9]].forEach(([x,y,z],i)=>{
-  const sizes=[[.5,.4,.5],[.3,.6,.3],[.6,.3,.4],[.25,.5,.25]];
-  const s=sizes[i];
-  const g=mesh(geo(s[0],s[1],s[2]),MAT.green);
-  g.position.set(x,s[1]/2,z);
-  greenGroup.add(g);
-});
-const garden=mesh(geo(2.2,.05,1.8),new THREE.MeshLambertMaterial({color:0x5A9E5A}));
-garden.position.set(0,0,0);
-greenGroup.add(garden);
-greenGroup.position.set(.8,3.73,-.6);
-scene.add(greenGroup);
+      const bb=wb(W1+.4,bY,D1+.4,C.base,.5);bb.position.set(0,bY/2,0);tg.add(bb);
+      const bs=wb(W1+.55,.1,D1+.55,C.balc,.6);bs.position.set(0,bY+.05,0);tg.add(bs);
+      for(let f=0;f<floorsPerTower;f++){
+        const y=bY+.15+f*FH;
+        const slab=wb(W1+sE*2,.14,D1+sE*2,C.balc,.7);slab.position.set(0,y+FH-.05,0);tg.add(slab);
+        const env=wb(W1,FH-.2,D1,C.base,.35);env.position.set(0,y+FH/2,0);tg.add(env);
+        [[-W1/2,D1/2],[W1/2,D1/2],[-W1/2,-D1/2],[W1/2,-D1/2]].forEach(([x,z])=>{
+          const c=wb(.06,FH,.06,C.base,.5);c.position.set(x,y+FH/2,z);tg.add(c);
+        });
+        const numMullions=Math.max(0,unitsPerFloor-1);
+        for(let z of [D1/2,-D1/2]){
+          for(let i=0;i<numMullions;i++){
+            const mx = -W1/2 + (i+1)*W1/(numMullions+1);
+            const m=wb(.025,FH-.2,.02,C.base,.4);m.position.set(mx,y+FH/2,z);tg.add(m);
+          }
+        }
+        const rH=.22;
+        const rf=wb(W1+sE*2-.05,rH,.05,C.base,.4);rf.position.set(0,y+FH-.18+rH/2,D1/2+sE);tg.add(rf);
+        const rb=wb(W1+sE*2-.05,rH,.05,C.base,.4);rb.position.set(0,y+FH-.18+rH/2,-D1/2-sE);tg.add(rb);
+        const rl=wb(.05,rH,D1+sE*2-.05,C.base,.4);rl.position.set(-W1/2-sE,y+FH-.18+rH/2,0);tg.add(rl);
+        const rr=wb(.05,rH,D1+sE*2-.05,C.base,.4);rr.position.set(W1/2+sE,y+FH-.18+rH/2,0);tg.add(rr);
+      }
+      const tY=bY+.15+floorsPerTower*FH;
+      const ts=wb(W1+.7,.1,D1+.7,C.balc,.65);ts.position.set(0,tY+.05,0);tg.add(ts);
+      const at=wb(W1*.85,atticH,D1*.85,C.attic,.6);at.position.set(0,tY+.1+atticH/2,0);tg.add(at);
+      const att=wb(W1*.95,.08,D1*.95,C.attic,.55);att.position.set(0,tY+.1+atticH+.04,0);tg.add(att);
 
-// LED lights (facade strips)
-const ledGroup=new THREE.Group();
-for(let floor=0;floor<3;floor++){
-  const strip=mesh(geo(5.1,.04,.04),MAT.ledLight);
-  strip.position.set(0,.5+floor*1.1,2.04);
-  ledGroup.add(strip);
-}
-scene.add(ledGroup);
+      towerInfos.push({x:towerX,z:towerZ,topY:tY+.1+atticH+.08,bY,FH,FL:floorsPerTower,W1,D1,sE,idx:tIdx});
+      tIdx++;
+    }
+  }
 
-// SHELL highlight (transparent overlay on facade)
-const shellGroup=new THREE.Group();
-const shellFront=mesh(geo(5.05,3.7,.04),MAT.shell_hl);
-shellFront.position.set(0,1.85,2.04);
-shellGroup.add(shellFront);
-shellGroup.visible=false;
-scene.add(shellGroup);
+  // ── COURT (front-left of terrain, scales with terrain) ──
+  const courtW = Math.min(terrainW * 0.32, 5.5);
+  const courtD = Math.min(terrainD * 0.28, 3.2);
+  const courtZ = terrainD/2 - courtD/2 - 0.7;
+  const courtX = -terrainW/2 + courtW/2 + 0.7;
+  const cb=wb(courtW,.05,courtD,C.court,.5);cb.position.set(courtX,.025,courtZ);rootG.add(cb);
+  rootG.add(ll(new THREE.Vector3(courtX-courtW/2+.1,.03,courtZ),new THREE.Vector3(courtX+courtW/2-.1,.03,courtZ),C.court,.45));
+  const cc=new THREE.LineLoop(
+    new THREE.BufferGeometry().setFromPoints((()=>{const p=[];for(let a=0;a<=Math.PI*2;a+=Math.PI/16)p.push(new THREE.Vector3(courtX+.35*Math.cos(a),.03,courtZ+.35*Math.sin(a)));return p})()),
+    new THREE.LineBasicMaterial({color:C.court,transparent:true,opacity:.45})
+  );
+  rootG.add(cc);
+  // 4 light poles around court
+  const poles=[];
+  const cMx=courtW/2-.25,cMz=courtD/2-.25;
+  [[-cMx,-cMz],[cMx,-cMz],[-cMx,cMz],[cMx,cMz]].forEach(([dx,dz])=>{
+    const p=wcyl(.04,.04,1.1,C.court,.55);p.position.set(courtX+dx,.55,courtZ+dz);rootG.add(p);
+    poles.push({x:courtX+dx,y:1.1,z:courtZ+dz});
+    const lp=wb(.18,.06,.12,C.court,.6);lp.position.set(courtX+dx,1.13,courtZ+dz);rootG.add(lp);
+  });
+  // hoop posts
+  [[-cMx-.05,0],[cMx+.05,0]].forEach(([dx,dz])=>{
+    const p=wcyl(.025,.025,.5,C.court,.5);p.position.set(courtX+dx,.25,courtZ+dz);rootG.add(p);
+    const b=wb(.04,.25,.45,C.court,.5);b.position.set(courtX+dx,.55,courtZ+dz);rootG.add(b);
+  });
 
-// WIND vents
-const windGroup=new THREE.Group();
-[[0,2,.85],[0,2,-.85],[0,2,.3]].forEach(([x,y,z])=>{
-  const vent=mesh(geo(.4,.15,.04),MAT.wind_hl);
-  vent.position.set(x,y+1.8,z);
-  windGroup.add(vent);
-  const vent2=mesh(geo(.04,.15,.4),MAT.wind_hl);
-  vent2.position.set(x+1.5,y+1.8,z);
-  windGroup.add(vent2);
-});
-windGroup.visible=false;
-scene.add(windGroup);
+  // ── Pools removed — irrigação por aspersão substitui ──
+  const pools=[];
 
-// Surroundings — trees
-function tree(x,z){
-  const trunk=mesh(geo(.1,.5,.1),new THREE.MeshLambertMaterial({color:0x8B6914}));
-  trunk.position.set(x,.25,z);
-  scene.add(trunk);
-  const crown=mesh(new THREE.SphereGeometry(.45,7,6),new THREE.MeshLambertMaterial({color:0x3A7A3A}));
-  crown.position.set(x,.85,z);
-  scene.add(crown);
-}
-[[-4,2],[-4,-2],[-4,0],[4,3],[4,-3],[-3.5,4],[3.5,4],[-3.5,-4],[3.5,-4]].forEach(([x,z])=>tree(x,z));
+  // ── SPRINKLERS (aspersores distribuídos no jardim) ───
+  // Used as visual marker for irrigation system; alimentados pela cisterna pluvial
+  const sprinklers=[];
+  // Distribute around terrain perimeter, avoiding tower footprints + court
+  const sprinklerCols = Math.max(3, Math.floor(terrainW/3));
+  const sprinklerRows = Math.max(2, Math.floor(terrainD/3));
+  for(let row=0;row<sprinklerRows;row++){
+    for(let col=0;col<sprinklerCols;col++){
+      const baseX = -terrainW/2 + (col+0.5)*(terrainW/sprinklerCols);
+      const baseZ = -terrainD/2 + (row+0.5)*(terrainD/sprinklerRows);
+      // jitter
+      const sx = baseX + Math.sin(row*3.1+col*1.7)*0.5;
+      const sz = baseZ + Math.cos(row*2.3+col*4.1)*0.5;
+      // skip near towers
+      let blocked=false;
+      towerInfos.forEach(t=>{
+        if(Math.abs(t.x-sx)<W1/2+sE+.6 && Math.abs(t.z-sz)<D1/2+sE+.6)blocked=true;
+      });
+      // skip inside court
+      if(Math.abs(sx-courtX)<courtW/2+.4 && Math.abs(sz-courtZ)<courtD/2+.4)blocked=true;
+      if(!blocked) sprinklers.push({x:sx,z:sz});
+    }
+  }
 
-// Sys → object map
-const SYS_OBJS={
-  solar:solarGroup,water:waterGroup,green:greenGroup,led:ledGroup,
-  shell:shellGroup,wind:windGroup
-};
+  // ── PLANTS WITH 3 SPECIES TYPES ─────────────────────
+  // NATIVES: rounded leafy crowns (Ipê, Quaresmeira styles)
+  // EXOTICS: tall thin palms (Palmeira Imperial style)
+  // INVASIVES: low spreading shrubs (Leucena style)
 
-function updateHighlight(sys){
-  Object.keys(SYS_OBJS).forEach(k=>{
-    const obj=SYS_OBJS[k];
-    if(k==='shell'||k==='wind'){
-      obj.visible=(k===sys);
+  nativeG = new THREE.Group(); rootG.add(nativeG);
+  exoticG = new THREE.Group(); rootG.add(exoticG);
+  invasiveG = new THREE.Group(); rootG.add(invasiveG);
+
+  function nativeTree(x,z,s=1){
+    // robust trunk
+    const trunk=wcyl(.06*s,.09*s,.5*s,C.nativeF,.45);
+    trunk.position.set(x,.25*s,z);nativeG.add(trunk);
+    tag(trunk,.45,.95,C.nativeF,C.nativeH);
+    // round full crown (icosahedron, larger)
+    const crown=new THREE.LineSegments(
+      new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(.42*s,1)),
+      new THREE.LineBasicMaterial({color:C.nativeF,transparent:true,opacity:.5})
+    );
+    crown.position.set(x,.85*s,z);nativeG.add(crown);
+    tag(crown,.5,.95,C.nativeF,C.nativeH);
+  }
+  function exoticPalm(x,z,s=1){
+    // EXOTIC: pinheiro / conifer tree — tronco reto + camadas triangulares decrescentes
+    // tronco
+    const trunk=wcyl(.05*s,.08*s,.5*s,C.exoticF,.5);
+    trunk.position.set(x,.25*s,z);exoticG.add(trunk);
+    tag(trunk,.5,.95,C.exoticF,C.exoticH);
+
+    // 4 camadas cônicas (triângulos sobrepostos do mais largo abaixo ao mais estreito acima)
+    const layers = [
+      {y: .5*s,  r: .42*s, h: .35*s},
+      {y: .8*s,  r: .35*s, h: .35*s},
+      {y: 1.1*s, r: .28*s, h: .35*s},
+      {y: 1.4*s, r: .18*s, h: .3*s},
+    ];
+    layers.forEach(L=>{
+      // cone wireframe (8 ribs from base to tip)
+      const ribCount = 6;
+      for(let i=0;i<ribCount;i++){
+        const angle = (i/ribCount)*Math.PI*2;
+        const baseX = x + Math.cos(angle)*L.r;
+        const baseZ = z + Math.sin(angle)*L.r;
+        const rib = ll(
+          new THREE.Vector3(baseX, L.y, baseZ),
+          new THREE.Vector3(x, L.y+L.h, z),
+          C.exoticF, .42
+        );
+        exoticG.add(rib);
+        tag(rib, .42, .9, C.exoticF, C.exoticH);
+      }
+      // base ring of the cone (connects all ribs at the bottom)
+      const ringPts=[];
+      for(let i=0;i<=16;i++){
+        const a=(i/16)*Math.PI*2;
+        ringPts.push(new THREE.Vector3(x+Math.cos(a)*L.r, L.y, z+Math.sin(a)*L.r));
+      }
+      const ring = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(ringPts),
+        new THREE.LineBasicMaterial({color:C.exoticF, transparent:true, opacity:.35})
+      );
+      exoticG.add(ring);
+      tag(ring, .35, .85, C.exoticF, C.exoticH);
+    });
+
+    // ponta superior (top tip of pine)
+    const tipPts=[
+      new THREE.Vector3(x, 1.7*s, z),
+      new THREE.Vector3(x, 1.85*s, z),
+    ];
+    const tip = new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints(tipPts),
+      new THREE.LineBasicMaterial({color:C.exoticF, transparent:true, opacity:.55})
+    );
+    exoticG.add(tip);
+    tag(tip, .55, .95, C.exoticF, C.exoticH);
+  }
+
+  function invasiveShrub(x,z,s=1){
+    // INVASIVE: aggressive spreading mat with warning markers
+    // Irregular zigzag spreading pattern (suggests aggressive root expansion)
+    const tendrilCount = 5;
+    for(let t=0;t<tendrilCount;t++){
+      const angle = (t/tendrilCount)*Math.PI*2 + Math.sin(t*7.3)*0.4;
+      // zigzag tendril extending outward
+      const segments = 4;
+      const pts = [new THREE.Vector3(x, .08*s, z)];
+      for(let seg=1;seg<=segments;seg++){
+        const r = (seg/segments) * 0.35 * s;
+        const wobble = Math.sin(t*5.7 + seg*3.1) * 0.08 * s;
+        pts.push(new THREE.Vector3(
+          x + Math.cos(angle+wobble*2)*r,
+          .08*s + Math.sin(seg*2.3)*0.04*s,
+          z + Math.sin(angle+wobble*2)*r
+        ));
+      }
+      const tendril = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(pts),
+        new THREE.LineBasicMaterial({color:C.invasiveF, transparent:true, opacity:.4})
+      );
+      invasiveG.add(tendril);
+      tag(tendril, .4, .9, C.invasiveF, C.invasiveH);
+    }
+    // central low mass with X-like warning crossing on top
+    const base = wcyl(.04*s, .06*s, .12*s, C.invasiveF, .4);
+    base.position.set(x, .06*s, z);
+    invasiveG.add(base);
+    tag(base, .4, .9, C.invasiveF, C.invasiveH);
+
+    // small "warning" cross on top — distinct visual marker
+    const armLen = 0.12*s;
+    const cross1 = ll(
+      new THREE.Vector3(x-armLen, .14*s, z-armLen),
+      new THREE.Vector3(x+armLen, .14*s, z+armLen),
+      C.invasiveF, .35
+    );
+    const cross2 = ll(
+      new THREE.Vector3(x-armLen, .14*s, z+armLen),
+      new THREE.Vector3(x+armLen, .14*s, z-armLen),
+      C.invasiveF, .35
+    );
+    invasiveG.add(cross1); tag(cross1, .35, .9, C.invasiveF, C.invasiveH);
+    invasiveG.add(cross2); tag(cross2, .35, .9, C.invasiveF, C.invasiveH);
+
+    // small upright spike (suggests aggressive vertical spread)
+    const spike = ll(
+      new THREE.Vector3(x, .12*s, z),
+      new THREE.Vector3(x, .32*s, z),
+      C.invasiveF, .45
+    );
+    invasiveG.add(spike);
+    tag(spike, .45, .95, C.invasiveF, C.invasiveH);
+  }
+
+  // Distribute plants ORGANICALLY (Poisson-like with jitter)
+  const halfW=terrainW/2,halfD=terrainD/2;
+  const plantPositions=[];
+
+  // Generate candidate positions in a jittered grid, filter by collision with towers/court/pools
+  const gridStep = 1.4;
+  const cellsX = Math.floor(terrainW/gridStep);
+  const cellsZ = Math.floor(terrainD/gridStep);
+  function rand(seed){
+    // deterministic pseudo-random from seed
+    const v = Math.sin(seed*12.9898) * 43758.5453;
+    return v - Math.floor(v);
+  }
+  let candidateIdx=0;
+  for(let cx=0;cx<cellsX;cx++){
+    for(let cz=0;cz<cellsZ;cz++){
+      candidateIdx++;
+      const baseX = -halfW + (cx+0.5)*gridStep;
+      const baseZ = -halfD + (cz+0.5)*gridStep;
+      // jitter within cell
+      const jx = (rand(candidateIdx*1.3)-0.5) * gridStep * 0.85;
+      const jz = (rand(candidateIdx*2.7)-0.5) * gridStep * 0.85;
+      const x = baseX + jx;
+      const z = baseZ + jz;
+      // skip if outside terrain margin
+      if(Math.abs(x) > halfW-.4 || Math.abs(z) > halfD-.4)continue;
+      // skip if inside tower footprint
+      let blocked=false;
+      towerInfos.forEach(t=>{
+        if(Math.abs(t.x-x) < W1/2+sE+.4 && Math.abs(t.z-z) < D1/2+sE+.4)blocked=true;
+      });
+      if(blocked)continue;
+      // skip if inside court area
+      if(Math.abs(x-courtX) < courtW/2+.3 && Math.abs(z-courtZ) < courtD/2+.3)continue;
+      // skip if inside pool area
+      pools.forEach(p=>{
+        const dist=Math.sqrt((p.x-x)*(p.x-x)+(p.z-z)*(p.z-z));
+        if(dist < 1.2)blocked=true;
+      });
+      if(blocked)continue;
+      // randomly skip some cells for natural sparseness
+      if(rand(candidateIdx*5.7) > 0.78)continue;
+      // assign type randomly with weights (60% native, 30% exotic, 10% invasive)
+      const r=rand(candidateIdx*7.3);
+      let type='native';
+      if(r > 0.6 && r <= 0.9) type='exotic';
+      else if(r > 0.9) type='invasive';
+      plantPositions.push({x,z,type,seed:candidateIdx});
+    }
+  }
+
+  plantPositions.forEach(p=>{
+    const scale=.7+rand(p.seed*9.1)*.45;
+    if(p.type==='native')nativeTree(p.x,p.z,scale);
+    else if(p.type==='exotic')exoticPalm(p.x,p.z,scale*.9);
+    else invasiveShrub(p.x,p.z,scale*.8);
+  });
+
+  // ── SYSTEM ASSIGNMENT — distributed across all towers ──
+  const enabledSystems = [];
+  if(document.getElementById('sys-solar')?.checked !== false) enabledSystems.push('solar');
+  if(document.getElementById('sys-grey')?.checked !== false) enabledSystems.push('grey');
+  if(document.getElementById('sys-water')?.checked !== false) enabledSystems.push('water');
+  if(document.getElementById('sys-irr')?.checked !== false) enabledSystems.push('irrigation');
+
+  // Distribute systems so EVERY enabled system appears in at least one tower
+  const towerSystems = towerInfos.map(()=>[]);
+  if(enabledSystems.length > 0){
+    if(numTowers >= enabledSystems.length){
+      // More towers than systems — rotate, ensuring each enabled system gets at least one tower
+      towerInfos.forEach((t,i)=>{
+        towerSystems[i].push(enabledSystems[i % enabledSystems.length]);
+      });
     } else {
-      obj.traverse(c=>{
-        if(c.isMesh&&c.material){
-          c.material.emissive=new THREE.Color(k===sys?0x2a8a5a:0x000000);
-          c.material.emissiveIntensity=k===sys?.4:0;
+      // Fewer towers than systems — distribute systems among towers (some towers get multiple)
+      enabledSystems.forEach((sys, i)=>{
+        const towerIdx = i % numTowers;
+        towerSystems[towerIdx].push(sys);
+      });
+    }
+  }
+
+  solarG=new THREE.Group();rootG.add(solarG);
+  condG=new THREE.Group();rootG.add(condG);
+  greyG=new THREE.Group();rootG.add(greyG);
+  waterG=new THREE.Group();rootG.add(waterG);
+  irrG=new THREE.Group();rootG.add(irrG);
+
+  // Build systems for each tower based on assignment
+  towerInfos.forEach((info,idx)=>{
+    const systems = towerSystems[idx];
+
+    if(systems.includes('solar')){
+      const sTopY=info.topY;
+      const panelCols=Math.max(2,Math.floor(W1/.7));
+      const panelRows=Math.max(1,Math.floor(D1/.55));
+      for(let i=0;i<panelCols;i++){
+        for(let j=0;j<panelRows;j++){
+          const p=wb(.5,.04,.35,C.solarF,.35);
+          p.position.set(info.x-W1/2+0.3+i*(W1-.6)/(panelCols-1||1),sTopY+.04,info.z-D1/2+0.25+j*(D1-.5)/(panelRows-1||1));
+          solarG.add(p);tag(p,.35,1,C.solarF,C.solarH);
+        }
+      }
+      const cd=wcyl(.025,.025,info.FL*FH+bY,C.solarF,.2);
+      cd.position.set(info.x+.5,bY+.1+info.FL*FH/2,info.z-.2);
+      condG.add(cd);tag(cd,.2,.85,C.solarF,C.solarH);
+      for(let f=0;f<info.FL;f++){
+        const br=wcyl(.018,.018,W1*.7,C.solarF,.2);br.rotation.z=Math.PI/2;
+        br.position.set(info.x-.2,bY+.15+f*FH+FH/2,info.z-.2);
+        condG.add(br);tag(br,.2,.7,C.solarF,C.solarH);
+      }
+    }
+
+    if(systems.includes('grey')){
+      const gm=wcyl(.035,.035,info.FL*FH+bY+.4,C.greyF,.3);
+      gm.position.set(info.x,bY+.15+info.FL*FH/2-.2,info.z);
+      greyG.add(gm);tag(gm,.3,.9,C.greyF,C.greyH);
+      for(let f=0;f<info.FL;f++){
+        const y=bY+.15+f*FH+.2;
+        [.4,-.4].forEach(zS=>{
+          const pk=wcyl(.018,.018,.5,C.greyF,.22);pk.rotation.z=Math.PI/2;
+          pk.position.set(info.x-.25,y,info.z+zS);greyG.add(pk);tag(pk,.22,.75,C.greyF,C.greyH);
+        });
+      }
+      // place tank to the side, but ensure within terrain
+      const tankSide = info.x < 0 ? -1.5 : 1.5;
+      const tt=wb(1.4,.45,1,C.greyF,.35);tt.position.set(info.x+tankSide,-.43,info.z);greyG.add(tt);tag(tt,.35,.95,C.greyF,C.greyH);
+      const upp=wcyl(.025,.025,info.FL*FH+bY+.4,C.greyF,.25);
+      upp.position.set(info.x+tankSide*.87,bY+.15+info.FL*FH/2-.2,info.z);
+      greyG.add(upp);tag(upp,.25,.85,C.greyF,C.greyH);
+    }
+
+    if(systems.includes('water')){
+      const cl=wb(W1*.95,.06,D1*.85,C.waterF,.3);cl.position.set(info.x,info.topY+.04,info.z);waterG.add(cl);tag(cl,.3,.9,C.waterF,C.waterH);
+      [-1,1].forEach(s=>{
+        const p=wcyl(.04,.04,info.FL*FH+bY+.5,C.waterF,.3);
+        p.position.set(info.x+s*(W1/2-.1),bY+.15+info.FL*FH/2,info.z);
+        waterG.add(p);tag(p,.3,.9,C.waterF,C.waterH);
+      });
+      const cs=wb(W1*.9,.5,D1*.85,C.waterF,.35);cs.position.set(info.x,-.45,info.z);waterG.add(cs);tag(cs,.35,.95,C.waterF,C.waterH);
+    }
+
+    if(systems.includes('irrigation')){
+      function fl(x,y,z,len,ax){
+        const p=ax==='x'?wb(len,.08,.18,C.greenF,.3):wb(.18,.08,len,C.greenF,.3);
+        p.position.set(x,y,z);irrG.add(p);tag(p,.3,.9,C.greenF,C.greenH);
+        const dl=wcyl(.012,.012,len,C.greenF,.25);if(ax==='x')dl.rotation.z=Math.PI/2;
+        dl.position.set(x,y+.06,z);irrG.add(dl);tag(dl,.25,.85,C.greenF,C.greenH);
+      }
+      for(let f=0;f<info.FL;f++){
+        const y=bY+.15+f*FH+FH-.18+.04;
+        fl(info.x,y,info.z+D1/2+sE+.05,W1+sE*2-.2,'x');
+        fl(info.x,y,info.z-(D1/2+sE+.05),W1+sE*2-.2,'x');
+      }
+    }
+  });
+
+  // ── ASPERSORES (parte do irrigation group, sempre visíveis em opacidade baixa) ──
+  // Each sprinkler: short stem + small water spray pattern (4 short outward lines)
+  sprinklers.forEach(s=>{
+    // stem
+    const stem=wcyl(.025,.03,.18,C.greenF,.3);
+    stem.position.set(s.x,.09,s.z);
+    irrG.add(stem); tag(stem,.3,.9,C.greenF,C.greenH);
+    // small head ball
+    const head=new THREE.Mesh(
+      new THREE.SphereGeometry(.06,8,6),
+      new THREE.MeshBasicMaterial({color:C.greenF,transparent:true,opacity:.4})
+    );
+    head.position.set(s.x,.2,s.z);
+    irrG.add(head); tag(head,.4,.95,C.greenF,C.greenH);
+    // 4 small water spray lines (radial, like a rotating sprinkler)
+    for(let i=0;i<4;i++){
+      const angle=(i/4)*Math.PI*2;
+      const sprayPts=[];
+      // arc representing water trajectory
+      for(let t=0;t<=8;t++){
+        const tt=t/8;
+        const r=tt*0.4;
+        const h=Math.sin(tt*Math.PI)*0.18;
+        sprayPts.push(new THREE.Vector3(
+          s.x + Math.cos(angle)*r,
+          0.2 + h,
+          s.z + Math.sin(angle)*r
+        ));
+      }
+      const spray=new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(sprayPts),
+        new THREE.LineBasicMaterial({color:C.waterF,transparent:true,opacity:.2})
+      );
+      irrG.add(spray); tag(spray,.2,.8,C.waterF,C.waterH);
+    }
+  });
+
+  // ── COURT FEED — connect solar towers to court poles ──
+  const solarTowers = towerInfos.filter((t,i)=>towerSystems[i].includes('solar'));
+  if(solarTowers.length > 0){
+    // Find nearest solar tower to court
+    let nearestSolar = solarTowers[0];
+    let minDist = Infinity;
+    solarTowers.forEach(t=>{
+      const d=Math.sqrt((t.x-courtX)*(t.x-courtX)+(t.z-courtZ)*(t.z-courtZ));
+      if(d<minDist){minDist=d;nearestSolar=t;}
+    });
+    poles.forEach(p=>{
+      const pts=[
+        new THREE.Vector3(nearestSolar.x+.5,.05,nearestSolar.z),
+        new THREE.Vector3(nearestSolar.x+.5,-.15,nearestSolar.z),
+        new THREE.Vector3(p.x,-.15,p.z),
+        new THREE.Vector3(p.x,.05,p.z)
+      ];
+      const cab=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:C.solarF,transparent:true,opacity:.18}));
+      condG.add(cab);tag(cab,.18,.85,C.solarF,C.solarH);
+      const lit=new THREE.Mesh(new THREE.SphereGeometry(.06,8,6),new THREE.MeshBasicMaterial({color:C.solarF,transparent:true,opacity:.3}));
+      lit.position.set(p.x,p.y+.05,p.z);condG.add(lit);tag(lit,.3,.95,C.solarF,C.solarH);
+    });
+  }
+
+  // ── IRRIGATION FEED — water towers feed sprinklers and balcony planters ──
+  const waterTowers = towerInfos.filter((t,i)=>towerSystems[i].includes('water'));
+  if(waterTowers.length > 0){
+    // Find irrigation towers for balcony planters
+    const irrTowers = towerInfos.filter((t,i)=>towerSystems[i].includes('irrigation'));
+
+    // Underground feed from each water cistern to each sprinkler
+    sprinklers.forEach(s=>{
+      // find nearest water tower
+      let nearest = waterTowers[0];
+      let minDist = Infinity;
+      waterTowers.forEach(t=>{
+        const d=Math.sqrt((t.x-s.x)*(t.x-s.x)+(t.z-s.z)*(t.z-s.z));
+        if(d<minDist){minDist=d;nearest=t;}
+      });
+      const pts=[
+        new THREE.Vector3(nearest.x,-.45,nearest.z),
+        new THREE.Vector3(nearest.x,-.45,s.z),
+        new THREE.Vector3(s.x,-.45,s.z),
+        new THREE.Vector3(s.x,.05,s.z)
+      ];
+      const feed=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:C.waterF,transparent:true,opacity:.13}));
+      waterG.add(feed); tag(feed,.13,.7,C.waterF,C.waterH);
+    });
+
+    // Surface connection from cistern up to balcony planter system on irrigation towers
+    irrTowers.forEach(irrT=>{
+      // find nearest water tower to this irrigation tower
+      let nearestWT = waterTowers[0];
+      let minD = Infinity;
+      waterTowers.forEach(t=>{
+        const d=Math.sqrt((t.x-irrT.x)*(t.x-irrT.x)+(t.z-irrT.z)*(t.z-irrT.z));
+        if(d<minD){minD=d;nearestWT=t;}
+      });
+      // pipe from cistern to base of irrigation tower, then up to top floor
+      const topFloorY = bY + .15 + irrT.FL*FH;
+      const pts=[
+        new THREE.Vector3(nearestWT.x,-.45,nearestWT.z),
+        new THREE.Vector3(nearestWT.x,-.45,irrT.z),
+        new THREE.Vector3(irrT.x+W1/2+sE+.18,-.45,irrT.z),
+        new THREE.Vector3(irrT.x+W1/2+sE+.18,topFloorY,irrT.z),
+      ];
+      const supply=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:C.waterF,transparent:true,opacity:.16}));
+      waterG.add(supply); tag(supply,.16,.8,C.waterF,C.waterH);
+    });
+  }
+
+  // ── DOME (invisible — used only as anchor for solar chart) ──
+  domeG=new THREE.Group();rootG.add(domeG);
+  const maxTopY = Math.max(...towerInfos.map(t=>t.topY));
+  const halfDiag = Math.sqrt((terrainW/2)*(terrainW/2) + (terrainD/2)*(terrainD/2));
+  domeRadius = Math.max(halfDiag * 1.05, maxTopY * 1.15) + 1.5;
+  // Dome is invisible — exists only as mathematical reference for solar chart anchoring
+  // (no mesh added to scene)
+
+  // ── SOLAR CHART (now anchored on dome surface) ──────
+  chartG=new THREE.Group();rootG.add(chartG);
+  const arcPts=[];
+  const tilt = -0.45;
+  for(let a=0;a<=Math.PI;a+=Math.PI/40){
+    const azimuth = Math.PI - a;
+    const altitude = Math.sin(a) * 0.65;
+    const x = domeRadius * Math.cos(altitude) * Math.cos(azimuth);
+    const y = domeRadius * Math.sin(altitude);
+    const z = domeRadius * Math.cos(altitude) * Math.sin(azimuth) * tilt;
+    arcPts.push(new THREE.Vector3(x, y, z));
+  }
+  const ma=new THREE.Line(new THREE.BufferGeometry().setFromPoints(arcPts),new THREE.LineBasicMaterial({color:C.sun,transparent:true,opacity:.5}));
+  chartG.add(ma);tag(ma,.5,.92,C.sun,C.sun);
+  for(let s=-1;s<=1;s+=2){
+    const sPts=[];
+    for(let a=0;a<=Math.PI;a+=Math.PI/40){
+      const azimuth = Math.PI - a;
+      const altitude = Math.sin(a) * 0.65 + s * 0.18;
+      const x = domeRadius * Math.cos(altitude) * Math.cos(azimuth);
+      const y = domeRadius * Math.sin(altitude);
+      const z = domeRadius * Math.cos(altitude) * Math.sin(azimuth) * tilt;
+      sPts.push(new THREE.Vector3(x, y, z));
+    }
+    const sa=new THREE.Line(new THREE.BufferGeometry().setFromPoints(sPts),new THREE.LineBasicMaterial({color:C.sun,transparent:true,opacity:.18}));
+    chartG.add(sa);tag(sa,.18,.55,C.sun,C.sun);
+  }
+  [0.1,0.25,0.4,0.55,0.7,0.85].forEach(t=>{
+    const idx=Math.floor(t*(arcPts.length-1));
+    const sun=new THREE.Mesh(new THREE.SphereGeometry(.18,12,10),new THREE.MeshBasicMaterial({color:C.sun,transparent:true,opacity:.55}));
+    sun.position.copy(arcPts[idx]);chartG.add(sun);tag(sun,.55,.95,C.sun,C.sun);
+  });
+  arcPts.forEach((p,i)=>{
+    if(i%6!==0)return;
+    const ray=ll(p,new THREE.Vector3(0,0.5,0),C.sun,.06);chartG.add(ray);tag(ray,.06,.35,C.sun,C.sun);
+  });
+
+  // ── THERMAL — gradient bands wrapping the building (faixas térmicas) ──
+  // Concept: horizontal "thermal zones" representing temperature gradient management
+  // External hot zone → insulation buffer → internal comfort zone
+  thG=new THREE.Group();rootG.add(thG);
+  towerInfos.forEach(info=>{
+    const towerH = info.FL*FH;
+    // 5 horizontal thermal bands distributed along facade height
+    const numBands = Math.min(8, Math.max(4, Math.floor(info.FL/3)));
+    for(let b=0;b<numBands;b++){
+      const yPos = info.bY + .15 + (b+0.5)/numBands * towerH;
+      // outer hot band (wraps further out, lighter color)
+      const outer = wb(W1+sE*2+.4, .15, D1+sE*2+.4, C.thermalF, .08);
+      outer.position.set(info.x, yPos, info.z);
+      thG.add(outer); tag(outer, .08, .55, C.thermalF, C.thermalH);
+      // inner buffer band (closer to facade, denser feel)
+      const inner = wb(W1+sE*2+.18, .12, D1+sE*2+.18, C.thermalF, .12);
+      inner.position.set(info.x, yPos, info.z);
+      thG.add(inner); tag(inner, .12, .8, C.thermalF, C.thermalH);
+    }
+
+    // Thermal "leakage points" on corners (indicate well-managed thermal bridges)
+    // 4 vertical lines at corners showing thermal flux being controlled
+    [[W1/2+sE+.05, D1/2+sE+.05],[-W1/2-sE-.05, D1/2+sE+.05],
+     [W1/2+sE+.05, -D1/2-sE-.05],[-W1/2-sE-.05, -D1/2-sE-.05]].forEach(([dx,dz])=>{
+      const start = new THREE.Vector3(info.x+dx, info.bY+.15, info.z+dz);
+      const end = new THREE.Vector3(info.x+dx, info.bY+.15+towerH, info.z+dz);
+      const corner = ll(start, end, C.thermalF, .15);
+      thG.add(corner); tag(corner, .15, .9, C.thermalF, C.thermalH);
+    });
+
+    // Heat dissipation indicators on the roof (vertical lines pointing up)
+    const roofY = info.bY + .15 + towerH;
+    for(let i=0;i<4;i++){
+      const angle = (i/4)*Math.PI*2;
+      const rx = info.x + Math.cos(angle)*W1*0.3;
+      const rz = info.z + Math.sin(angle)*D1*0.3;
+      const flux = ll(
+        new THREE.Vector3(rx, roofY+.05, rz),
+        new THREE.Vector3(rx, roofY+.45, rz),
+        C.thermalF, .12
+      );
+      thG.add(flux); tag(flux, .12, .85, C.thermalF, C.thermalH);
+    }
+  });
+
+  // ── ACOUSTIC — incoming sound waves from street + absorption barrier ──
+  // Concept: visible sound waves coming from the street (south, +Z) being
+  // dissipated by the facade's acoustic treatment
+  acG=new THREE.Group();rootG.add(acG);
+  towerInfos.forEach(info=>{
+    const towerH = info.FL*FH;
+    const facadeZ = info.z + D1/2 + sE;
+    const sourceZ = facadeZ + 1.5; // sound source distance from facade
+
+    // 4 incoming wavefronts at different heights
+    const numWaves = Math.min(6, Math.max(3, Math.floor(info.FL/3)));
+    for(let w=0;w<numWaves;w++){
+      const yPos = info.bY + .15 + (w+0.5)/numWaves * towerH;
+      // wave front: a wavy line approaching the facade
+      const wavePts = [];
+      const segments = 24;
+      for(let s=0;s<=segments;s++){
+        const t = s/segments;
+        const x = info.x - W1*0.7 + t*W1*1.4;
+        const wave = Math.sin(t*Math.PI*4) * 0.08;
+        wavePts.push(new THREE.Vector3(x, yPos + wave, sourceZ));
+      }
+      const wavefront = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(wavePts),
+        new THREE.LineBasicMaterial({color:C.acousticF, transparent:true, opacity:.12})
+      );
+      acG.add(wavefront); tag(wavefront, .12, .8, C.acousticF, C.acousticH);
+
+      // attenuated wave just past the facade (much shorter, dimmer — represents what passes through)
+      const passedPts=[];
+      for(let s=0;s<=segments;s++){
+        const t=s/segments;
+        const x = info.x - W1*0.5 + t*W1*1.0;
+        const wave = Math.sin(t*Math.PI*4) * 0.03;
+        passedPts.push(new THREE.Vector3(x, yPos + wave, info.z - D1/2 - sE - 0.15));
+      }
+      const passed = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(passedPts),
+        new THREE.LineBasicMaterial({color:C.acousticF, transparent:true, opacity:.05})
+      );
+      acG.add(passed); tag(passed, .05, .35, C.acousticF, C.acousticH);
+
+      // small absorption marks on the facade itself (where sound is being absorbed)
+      for(let i=0;i<3;i++){
+        const mx = info.x - W1*0.3 + i*W1*0.3;
+        const arrow = ll(
+          new THREE.Vector3(mx, yPos, sourceZ - 0.3),
+          new THREE.Vector3(mx, yPos, facadeZ + 0.05),
+          C.acousticF, .1
+        );
+        acG.add(arrow); tag(arrow, .1, .65, C.acousticF, C.acousticH);
+      }
+    }
+
+    // Acoustic facade indicator — a thin line tracing the front facade (the protected one)
+    const facadeLine = new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(info.x-W1/2-sE, info.bY+.15, facadeZ+0.02),
+        new THREE.Vector3(info.x+W1/2+sE, info.bY+.15, facadeZ+0.02),
+        new THREE.Vector3(info.x+W1/2+sE, info.bY+.15+towerH, facadeZ+0.02),
+        new THREE.Vector3(info.x-W1/2-sE, info.bY+.15+towerH, facadeZ+0.02),
+        new THREE.Vector3(info.x-W1/2-sE, info.bY+.15, facadeZ+0.02),
+      ]),
+      new THREE.LineBasicMaterial({color:C.acousticF, transparent:true, opacity:.15})
+    );
+    acG.add(facadeLine); tag(facadeLine, .15, .9, C.acousticF, C.acousticH);
+  });
+
+  // ── LUMINIC — sun rays from dome + interior light pools on floors ──
+  lmG=new THREE.Group();rootG.add(lmG);
+  const sunPositions=[arcPts[10],arcPts[20],arcPts[30]];
+
+  towerInfos.forEach(info=>{
+    sunPositions.forEach((sP, sunIdx)=>{
+      const dx=sP.x-info.x, dz=sP.z-info.z;
+      const facingX=dx>0?1:-1;
+      const facingZ=dz>0?1:-1;
+
+      // Use 3 floor heights for richer representation
+      [Math.floor(info.FL*0.2), Math.floor(info.FL*0.5), Math.floor(info.FL*0.8)].forEach(f=>{
+        const y=info.bY+.15+f*FH+FH/2;
+        const floorY = info.bY+.15+f*FH+0.05; // slab top
+
+        let entry;
+        if(Math.abs(dx)>Math.abs(dz)){
+          const tx=info.x+facingX*(W1/2+sE);
+          const tz=info.z+Math.max(-D1/2,Math.min(D1/2,dz*0.3));
+          entry=new THREE.Vector3(tx,y,tz);
+        }else{
+          const tz=info.z+facingZ*(D1/2+sE);
+          const tx=info.x+Math.max(-W1/2,Math.min(W1/2,dx*0.3));
+          entry=new THREE.Vector3(tx,y,tz);
+        }
+
+        // Ray from sun on dome to facade
+        const ext=ll(sP,entry,C.luminicF,.08);lmG.add(ext);tag(ext,.08,.9,C.luminicF,C.luminicH);
+
+        // Light pool on the floor inside (small bright rectangle showing where light reaches)
+        const dir=new THREE.Vector3().subVectors(entry,sP).normalize();
+        const poolCenter = new THREE.Vector3(
+          entry.x + dir.x * 0.5,
+          floorY,
+          entry.z + dir.z * 0.5
+        );
+        // Draw a small "X" marking the light pool on the floor
+        const poolSize = 0.18;
+        const dir1 = new THREE.Vector3(dir.x, 0, dir.z).normalize();
+        const dir2 = new THREE.Vector3(-dir.z, 0, dir.x).normalize();
+        const x1 = ll(
+          new THREE.Vector3(poolCenter.x - dir1.x*poolSize, floorY, poolCenter.z - dir1.z*poolSize),
+          new THREE.Vector3(poolCenter.x + dir1.x*poolSize, floorY, poolCenter.z + dir1.z*poolSize),
+          C.luminicF, .12
+        );
+        const x2 = ll(
+          new THREE.Vector3(poolCenter.x - dir2.x*poolSize*0.7, floorY, poolCenter.z - dir2.z*poolSize*0.7),
+          new THREE.Vector3(poolCenter.x + dir2.x*poolSize*0.7, floorY, poolCenter.z + dir2.z*poolSize*0.7),
+          C.luminicF, .12
+        );
+        lmG.add(x1); tag(x1, .12, .85, C.luminicF, C.luminicH);
+        lmG.add(x2); tag(x2, .12, .85, C.luminicF, C.luminicH);
+
+        // Window marker (entry point)
+        const mk=new THREE.Mesh(new THREE.SphereGeometry(.06,6,5),new THREE.MeshBasicMaterial({color:C.luminicF,transparent:true,opacity:.18}));
+        mk.position.copy(entry);
+        lmG.add(mk);tag(mk,.18,.95,C.luminicF,C.luminicH);
+
+        // Indirect/reflected light hint — small horizontal hatches deeper in the floor
+        if(sunIdx === 1){ // only for noon sun (avoids cluttering)
+          for(let h=0;h<3;h++){
+            const hx = poolCenter.x + dir.x*0.25 + h*dir.x*0.12;
+            const hz = poolCenter.z + dir.z*0.25 + h*dir.z*0.12;
+            const hatch = ll(
+              new THREE.Vector3(hx-0.05, floorY, hz),
+              new THREE.Vector3(hx+0.05, floorY, hz),
+              C.luminicF, .07-h*.015
+            );
+            lmG.add(hatch); tag(hatch, .07-h*.015, .55-h*.1, C.luminicF, C.luminicH);
+          }
         }
       });
+    });
+  });
+
+  reset();
+}
+
+// ── SOLAR CHART agora é construída dentro do build() ────
+
+// ── HIGHLIGHT LOGIC ─────────────────────────────────────
+function gh(g,h){
+  if(!g)return;
+  g.traverse(o=>{
+    if(o.material&&o.userData.fo!==undefined){
+      o.material.opacity=h?o.userData.ho:o.userData.fo;
+      o.material.color.setHex(h?o.userData.hc:o.userData.fc);
     }
   });
 }
-updateHighlight('solar');
-
-// Orbit controls (manual)
-let isDragging=false,prevX=0,prevY=0;
-let spherical={theta:Math.atan2(8,9),phi:Math.atan2(Math.sqrt(8*8+9*9),7)};
-const R=Math.sqrt(8*8+7*7+9*9);
-
-canvas.addEventListener('mousedown',e=>{isDragging=true;prevX=e.clientX;prevY=e.clientY});
-window.addEventListener('mouseup',()=>isDragging=false);
-window.addEventListener('mousemove',e=>{
-  if(!isDragging)return;
-  const dx=(e.clientX-prevX)*.007;
-  const dy=(e.clientY-prevY)*.007;
-  spherical.theta-=dx;
-  spherical.phi=Math.max(.3,Math.min(1.4,spherical.phi+dy));
-  prevX=e.clientX;prevY=e.clientY;
-  camera.position.set(
-    R*Math.sin(spherical.phi)*Math.sin(spherical.theta),
-    R*Math.cos(spherical.phi)+1,
-    R*Math.sin(spherical.phi)*Math.cos(spherical.theta)
-  );
-  camera.lookAt(0,1.5,0);
-});
-canvas.addEventListener('touchstart',e=>{isDragging=true;prevX=e.touches[0].clientX;prevY=e.touches[0].clientY},{passive:true});
-canvas.addEventListener('touchend',()=>isDragging=false);
-canvas.addEventListener('touchmove',e=>{
-  const dx=(e.touches[0].clientX-prevX)*.007;
-  spherical.theta-=dx;
-  prevX=e.touches[0].clientX;
-  camera.position.set(R*Math.sin(spherical.phi)*Math.sin(spherical.theta),R*Math.cos(spherical.phi)+1,R*Math.sin(spherical.phi)*Math.cos(spherical.theta));
-  camera.lookAt(0,1.5,0);
-},{passive:true});
-
-// Auto-rotate
-let autoRotate=true;
-canvas.addEventListener('mousedown',()=>autoRotate=false);
-
-function animate(){
-  requestAnimationFrame(animate);
-  if(autoRotate){
-    spherical.theta+=.003;
-    camera.position.set(R*Math.sin(spherical.phi)*Math.sin(spherical.theta),R*Math.cos(spherical.phi)+1,R*Math.sin(spherical.phi)*Math.cos(spherical.theta));
-    camera.lookAt(0,1.5,0);
-  }
-  renderer.render(scene,camera);
+function reset(){
+  [solarG,condG,waterG,greyG,irrG,thG,acG,lmG,chartG,nativeG,exoticG,invasiveG].forEach(g=>gh(g,false));
 }
-animate();
 
-window.addEventListener('resize',()=>{
-  const w=canvas.parentElement.offsetWidth;
-  renderer.setSize(w,H);
-  camera.aspect=w/H;
-  camera.updateProjectionMatrix();
+const SYS={
+  solar:()=>{reset();gh(solarG,true);gh(condG,true);},
+  water:()=>{reset();gh(waterG,true);},
+  grey:()=>{reset();gh(greyG,true);},
+  irrigation:()=>{reset();gh(irrG,true);},
+  thermal:()=>{reset();gh(thG,true);},
+  acoustic:()=>{reset();gh(acG,true);},
+  luminic:()=>{reset();gh(lmG,true);gh(chartG,true);},
+  solarchart:()=>{reset();gh(chartG,true);},
+  natives:()=>{reset();gh(nativeG,true);},
+  exotics:()=>{reset();gh(exoticG,true);},
+  invasives:()=>{reset();gh(invasiveG,true);},
+};
+
+const INFO={
+  solar:"Painéis fotovoltaicos no topo da primeira torre geram energia limpa, distribuída para os apartamentos e para a iluminação da quadra esportiva.",
+  water:"Cobertura da torre coleta águas pluviais — descem por prumadas até a cisterna no subsolo, alimentando o sistema de irrigação eficiente do paisagismo.",
+  grey:"Águas cinzas dos chuveiros e lavatórios são tratadas no subsolo e retornam aos vasos sanitários — economia de até 30% no consumo de água potável.",
+  irrigation:"Irrigação por gotejamento nas floreiras das varandas + aspersores no jardim, alimentados pela água pluvial coletada — zero consumo de água potável no paisagismo.",
+  thermal:"Faixas térmicas externas representam zonas de gradiente — envoltória controla transferência de calor com isolamento, vidros de baixa emissividade e proteções solares.",
+  acoustic:"Ondas sonoras vindas da rua são parcialmente absorvidas pela fachada — vidros laminados acústicos e tratamento de absorção reduzem ruído urbano em até 35 dB.",
+  luminic:"Raios solares partem da carta solar e iluminam o interior — marcas no piso indicam onde a luz natural alcança em diferentes horários, reduzindo necessidade de iluminação artificial.",
+  solarchart:"Carta solar projetando a trajetória do sol ao longo do dia e do ano — fundamental para posicionamento ótimo dos sistemas.",
+  natives:"Espécies nativas (em verde): copas frondosas, árvores robustas como Ipês e Quaresmeiras. Demandam menos irrigação e suportam biodiversidade local.",
+  exotics:"Espécies exóticas (em ocre): pinheiros e coníferas decorativas. Comuns no paisagismo brasileiro mas demandam mais irrigação e manutenção que as nativas.",
+  invasives:"Espécies invasoras (em rosa): arbustos baixos espalhados como Leucena. Devem ser removidas para preservar o ecossistema nativo.",
+};
+const info=document.getElementById('info');
+const DEF="Conjunto residencial paramétrico. Ajuste o número de unidades acima e veja a volumetria reagir.";
+document.querySelectorAll('.sb').forEach(b=>{
+  b.addEventListener('mouseenter',()=>{SYS[b.dataset.s]();info.textContent=INFO[b.dataset.s];});
+  b.addEventListener('mouseleave',()=>{reset();info.textContent=DEF;});
 });
 
-// ── TITLE CYCLE ───────────────────────────────────────────
-const words=["Inovação.","Tecnologia.","Impacto.","Soluções."];
-let wi=0;
-const cyEl=document.getElementById('cy');
-setInterval(()=>{
-  cyEl.style.opacity='0';cyEl.style.transform='translateY(6px)';
-  setTimeout(()=>{wi=(wi+1)%words.length;cyEl.textContent=words[wi];cyEl.style.opacity='1';cyEl.style.transform='none';},300);
-},2500);
+// ── ORBIT ──────────────────────────────────────────────
+cv.addEventListener('mousedown',e=>{drag=true;px=e.clientX;py=e.clientY;cv.style.cursor='grabbing';auto=false;});
+window.addEventListener('mouseup',()=>{drag=false;cv.style.cursor='grab';});
+window.addEventListener('mousemove',e=>{
+  if(!drag)return;
+  th-=(e.clientX-px)*.005;
+  ph=Math.max(.5,Math.min(1.4,ph+(e.clientY-py)*.005));
+  px=e.clientX;py=e.clientY;updateCam();
+});
+let auto=true;
+function loop(){
+  requestAnimationFrame(loop);
+  if(auto){th+=.0015;updateCam();}
+  r.render(sc,cam);
+}
+loop();
 
-// ── SCROLL REVEAL ─────────────────────────────────────────
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
-  if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}
-}),{threshold:.1});
-document.querySelectorAll('.tl-item,.reveal').forEach(el=>obs.observe(el));
+// ── GBC CALCULATOR ENGINE (mirrors Excel logic) ─────────
+const GBC = {
+  AGUA_PER_CAPITA: 350,
+  Q_LAVATORIO_BL: 9, Q_CHUVEIRO_BL: 12, V_VASO_BL: 6, Q_COZINHA_BL: 9,
+  PESO_CHUVEIRO: 0.35, PESO_VASO: 0.30, PESO_LAVATORIO: 0.15, PESO_COZINHA: 0.10,
+  COEF_ESCOAM: 0.80, FRAC_CINZA: 0.35, DEM_NP: 0.30,
+  DIAS_RAIN: 14, DIAS_GREY: 1,
+  KWH_MES_UH_REF: 965,
+  PESO_UHS: 0.70, PESO_AC_TOT: 0.30,
+  PESO_ILUM_AC: 0.40, PESO_ELEV: 0.25, PESO_BOMBAS: 0.20, PESO_VENT: 0.15,
+  PESO_AQ_AGUA_UH: 0.30, PESO_AC_UH: 0.15, PESO_ILUM_UH: 0.10,
+  RED_ELEV_VVVF: 0.25, RED_ELEV_REGEN: 0.40,
+  RED_BOMBA_IR3: 0.03, RED_BOMBA_IR4: 0.06, RED_INVERSOR: 0.20,
+  RED_AC_A: 0.20, RED_AC_B: 0.10,
+  FRACAO_SOLAR: 0.65, RED_BOMBA_CALOR: 0.50, RED_AQ_GAS: 0.95,
+  RED_LED: 0.50, RED_SENSOR_CO: 0.50,
+  PCT_NATIVAS_GBC: 0.40,
+  VOL_CACAMBA: 5, VOL_CAMINHAO: 40, FAT_CO2_RES: 690,
+  DIAS_UTEIS: 22, FAT_GASOLINA: 2.3,
+};
 
-// ── ACTIVE NAV ────────────────────────────────────────────
-const secs=document.querySelectorAll('section[id]');
-const nls=document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id});
-  nls.forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
-},{passive:true});
+function calcWater(uhs, opts){
+  const baselineYear = GBC.AGUA_PER_CAPITA * opts.ppl * uhs * 365 / 1000;
+  const baselineDay = baselineYear / 365;
+  const npDay = baselineDay * GBC.DEM_NP;
+  const npYear = baselineYear * GBC.DEM_NP;
+
+  let redEquip = 0;
+  if(opts.equipEnabled){
+    redEquip += Math.max(0, (1 - opts.shower/GBC.Q_CHUVEIRO_BL)) * GBC.PESO_CHUVEIRO;
+    redEquip += Math.max(0, (1 - opts.toilet/GBC.V_VASO_BL)) * GBC.PESO_VASO;
+    redEquip += Math.max(0, (1 - opts.faucet/GBC.Q_LAVATORIO_BL)) * GBC.PESO_LAVATORIO;
+    redEquip += Math.max(0, (1 - opts.kitchen/GBC.Q_COZINHA_BL)) * GBC.PESO_COZINHA;
+  }
+
+  let redRain = 0;
+  if(opts.waterEnabled && opts.waterArea > 0 && opts.waterVol > 0){
+    const collected = opts.waterArea * opts.rain / 1000 * GBC.COEF_ESCOAM;
+    const days = npDay > 0 ? opts.waterVol / npDay : 0;
+    const eff = Math.min(1, days / GBC.DIAS_RAIN);
+    const used = Math.min(collected, npYear) * eff;
+    redRain = baselineYear > 0 ? used / baselineYear : 0;
+  }
+
+  let redGrey = 0;
+  if(opts.greyEnabled && opts.greyVol > 0){
+    const generated = baselineDay * GBC.FRAC_CINZA * 365;
+    const days = npDay > 0 ? opts.greyVol / npDay : 0;
+    const eff = Math.min(1, days / GBC.DIAS_GREY);
+    const used = Math.min(generated, npYear) * eff;
+    redGrey = baselineYear > 0 ? used / baselineYear : 0;
+  }
+
+  let finalRain = redRain, finalGrey = redGrey;
+  if(redRain + redGrey > GBC.DEM_NP && redRain + redGrey > 0){
+    const ratio = GBC.DEM_NP / (redRain + redGrey);
+    finalRain = redRain * ratio;
+    finalGrey = redGrey * ratio;
+  }
+
+  const totalRed = redEquip + Math.min(redRain + redGrey, GBC.DEM_NP);
+  const volSaved = baselineYear * totalRed;
+  const moneySaved = volSaved * opts.tarW;
+
+  return {totalRed, redEquip, redRain: finalRain, redGrey: finalGrey, volSaved, moneySaved, baselineYear};
+}
+
+function calcEnergy(uhs, opts){
+  const baselineUH = GBC.KWH_MES_UH_REF * uhs * 12;
+  const baselineAC = baselineUH * GBC.PESO_AC_TOT / GBC.PESO_UHS;
+  const baselineTotal = baselineUH + baselineAC;
+
+  const redIlumAC = opts.sensor;
+  let redElev = 0;
+  if(opts.elevator === 'vvvf') redElev = GBC.RED_ELEV_VVVF;
+  else if(opts.elevator === 'regen') redElev = GBC.RED_ELEV_REGEN;
+  let redPump = 0;
+  if(opts.pump === 'ir3') redPump = GBC.RED_BOMBA_IR3;
+  else if(opts.pump === 'ir4') redPump = GBC.RED_BOMBA_IR4;
+  const redBombas = 1 - (1 - redPump) * (1 - (opts.inv === 'sim' ? GBC.RED_INVERSOR : 0));
+  const redVent = opts.co === 'sim' ? GBC.RED_SENSOR_CO : 0;
+
+  let redAQ = 0;
+  if(opts.heat === 'solar') redAQ = GBC.FRACAO_SOLAR;
+  else if(opts.heat === 'bomba') redAQ = GBC.RED_BOMBA_CALOR;
+  else if(opts.heat === 'gas') redAQ = GBC.RED_AQ_GAS;
+
+  let redAC = 0;
+  if(opts.ac === 'A') redAC = GBC.RED_AC_A;
+  else if(opts.ac === 'B') redAC = GBC.RED_AC_B;
+
+  const redLed = (opts.led/100) * GBC.RED_LED;
+
+  const savIlumAC = baselineAC * GBC.PESO_ILUM_AC * redIlumAC;
+  const savElev = baselineAC * GBC.PESO_ELEV * redElev;
+  const savBombas = baselineAC * GBC.PESO_BOMBAS * redBombas;
+  const savVent = baselineAC * GBC.PESO_VENT * redVent;
+  const savAQ = baselineUH * GBC.PESO_AQ_AGUA_UH * redAQ;
+  const savAC = baselineUH * GBC.PESO_AC_UH * redAC;
+  const savLed = baselineUH * GBC.PESO_ILUM_UH * redLed;
+  const savPV = opts.solarEnabled ? opts.solarGen : 0;
+  const totalSav = savIlumAC + savElev + savBombas + savVent + savAQ + savAC + savLed + savPV;
+
+  return {
+    baselineTotal, totalSav,
+    pctRed: baselineTotal > 0 ? totalSav / baselineTotal : 0,
+    pv: savPV, elevPump: savElev + savBombas + savVent,
+    acLight: savAC + savLed + savIlumAC, heat: savAQ,
+    money: totalSav * opts.tarE, co2: totalSav * opts.fatCO2,
+  };
+}
+
+function calcLandscaping(opts){
+  const totalCovered = (opts.paisNat + opts.paisAdap) / 100;
+  const meetsGBC = (opts.paisNat / 100) >= GBC.PCT_NATIVAS_GBC;
+  return {
+    pctNat: opts.paisNat / 100,
+    pctAdap: opts.paisAdap / 100,
+    pctCovered: totalCovered,
+    m2adequate: totalCovered * opts.paisArea,
+    meetsGBC,
+    margin: (opts.paisNat / 100) - GBC.PCT_NATIVAS_GBC,
+  };
+}
+
+function calcWalkability(opts){
+  const factor = opts.walk / 100;
+  const kmAvoided = opts.dist * 2 * factor * GBC.DIAS_UTEIS;
+  const litersAvoided = kmAvoided / opts.cons;
+  return {
+    score: opts.walk,
+    classification: opts.walk >= 90 ? 'Paraíso dos pedestres' :
+                    opts.walk >= 70 ? 'Muito caminhável' :
+                    opts.walk >= 50 ? 'Caminhável' :
+                    opts.walk >= 25 ? 'Dependente de carro' : 'Muito dependente de carro',
+    kmAvoided, litersAvoided,
+    moneyAvoided: litersAvoided * opts.tarG * 12,
+    co2Avoided: litersAvoided * GBC.FAT_GASOLINA * 12,
+  };
+}
+
+function calcWaste(opts){
+  const desv = (opts.resDesv / 100);
+  const volDesviado = opts.resTotal * desv;
+  return {
+    volDesviado,
+    cacambas: volDesviado / GBC.VOL_CACAMBA,
+    caminhoes: volDesviado / GBC.VOL_CAMINHAO,
+    co2: volDesviado * GBC.FAT_CO2_RES / 1000,
+  };
+}
+
+function fmtN(n, dec=0){
+  if(!isFinite(n)) return '0';
+  return n.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+}
+function fmtPct(n){return Math.round(n*100*10)/10 + '%';}
+function fmtMoney(n){return 'R$ ' + fmtN(n,0);}
+
+function readOpts(){
+  return {
+    ppl: parseInt(document.getElementById('i-ppl').value) || 4,
+    solarEnabled: document.getElementById('sys-solar').checked,
+    solarGen: parseFloat(document.getElementById('i-solar-gen').value) || 0,
+    greyEnabled: document.getElementById('sys-grey').checked,
+    greyVol: parseFloat(document.getElementById('i-grey-vol').value) || 0,
+    waterEnabled: document.getElementById('sys-water').checked,
+    waterArea: parseFloat(document.getElementById('i-water-area').value) || 0,
+    waterVol: parseFloat(document.getElementById('i-water-vol').value) || 0,
+    rain: parseFloat(document.getElementById('i-city').value) || 1500,
+    equipEnabled: document.getElementById('sys-irr').checked,
+    shower: parseFloat(document.getElementById('i-shower').value) || 12,
+    toilet: parseFloat(document.getElementById('i-toilet').value) || 6,
+    faucet: parseFloat(document.getElementById('i-faucet').value) || 9,
+    kitchen: parseFloat(document.getElementById('i-kitchen').value) || 9,
+    sensor: parseFloat(document.getElementById('i-sensor').value) || 0,
+    elevator: document.getElementById('i-elevator').value,
+    pump: document.getElementById('i-pump').value,
+    inv: document.getElementById('i-inv').value,
+    co: document.getElementById('i-co').value,
+    ac: document.getElementById('i-ac').value,
+    heat: document.getElementById('i-heat').value,
+    led: parseFloat(document.getElementById('i-led').value) || 0,
+    paisArea: parseFloat(document.getElementById('i-pais-area').value) || 0,
+    paisNat: parseFloat(document.getElementById('i-pais-nat').value) || 0,
+    paisAdap: parseFloat(document.getElementById('i-pais-adap').value) || 0,
+    walk: parseInt(document.getElementById('i-walk').value) || 0,
+    dist: parseFloat(document.getElementById('i-dist').value) || 10,
+    cons: parseFloat(document.getElementById('i-cons').value) || 10,
+    resTotal: parseFloat(document.getElementById('i-res-total').value) || 0,
+    resDesv: parseFloat(document.getElementById('i-res-desv').value) || 0,
+    thAC: parseFloat(document.getElementById('i-th-ac').value) || 0,
+    thActive: parseFloat(document.getElementById('i-th-active').value) || 0,
+    thStab: parseFloat(document.getElementById('i-th-stab').value) || 0,
+    thRange: parseFloat(document.getElementById('i-th-range').value) || 0,
+    lmSup: parseFloat(document.getElementById('i-lm-sup').value) || 0,
+    lmInt: parseFloat(document.getElementById('i-lm-int').value) || 0,
+    lmMin: parseFloat(document.getElementById('i-lm-min').value) || 0,
+    tarW: parseFloat(document.getElementById('i-tar-w').value) || 7,
+    tarE: parseFloat(document.getElementById('i-tar-e').value) || 0.76,
+    tarG: parseFloat(document.getElementById('i-tar-g').value) || 6.20,
+    fatCO2: parseFloat(document.getElementById('i-fat-co2').value) || 0.0385,
+  };
+}
+
+function updateDashboard(uhs){
+  const opts = readOpts();
+
+  ['solar','grey','water','irr'].forEach(k=>{
+    const card = document.getElementById('sc-'+k);
+    const cb = document.getElementById('sys-'+k);
+    if(card && cb) card.classList.toggle('disabled', !cb.checked);
+  });
+
+  const w = calcWater(uhs, opts);
+  const e = calcEnergy(uhs, opts);
+  const p = calcLandscaping(opts);
+  const wk = calcWalkability(opts);
+  const r = calcWaste(opts);
+
+  // Water
+  document.getElementById('d-water-pct').textContent = '−' + fmtPct(w.totalRed);
+  document.getElementById('d-water-vol').textContent = fmtN(w.volSaved, 0);
+  document.getElementById('d-water-equip').textContent = fmtPct(w.redEquip);
+  document.getElementById('d-water-rain').textContent = fmtPct(w.redRain);
+  document.getElementById('d-water-grey').textContent = fmtPct(w.redGrey);
+  document.getElementById('d-water-equip-bar').style.width = Math.min(100, w.redEquip*100/0.4) + '%';
+  document.getElementById('d-water-rain-bar').style.width = Math.min(100, w.redRain*100/0.3) + '%';
+  document.getElementById('d-water-grey-bar').style.width = Math.min(100, w.redGrey*100/0.3) + '%';
+  document.getElementById('d-water-money').textContent = fmtMoney(w.moneySaved);
+
+  // Energy
+  document.getElementById('d-energy-pct').textContent = '−' + fmtPct(e.pctRed);
+  document.getElementById('d-energy-kwh').textContent = fmtN(e.totalSav, 0);
+  document.getElementById('d-energy-pv').textContent = fmtN(e.pv,0)+' kWh';
+  document.getElementById('d-energy-elev').textContent = fmtN(e.elevPump,0)+' kWh';
+  document.getElementById('d-energy-ac').textContent = fmtN(e.acLight,0)+' kWh';
+  document.getElementById('d-energy-heat').textContent = fmtN(e.heat,0)+' kWh';
+  const maxSav = Math.max(e.pv, e.elevPump, e.acLight, e.heat, 1);
+  document.getElementById('d-energy-pv-bar').style.width = (e.pv/maxSav*100) + '%';
+  document.getElementById('d-energy-elev-bar').style.width = (e.elevPump/maxSav*100) + '%';
+  document.getElementById('d-energy-ac-bar').style.width = (e.acLight/maxSav*100) + '%';
+  document.getElementById('d-energy-heat-bar').style.width = (e.heat/maxSav*100) + '%';
+  document.getElementById('d-energy-money').textContent = fmtMoney(e.money);
+  document.getElementById('d-energy-co2').textContent = fmtN(e.co2, 1);
+
+  // Landscaping
+  document.getElementById('d-pais-pct').textContent = fmtPct(p.pctNat);
+  document.getElementById('d-pais-area').textContent = fmtN(p.m2adequate,0);
+  document.getElementById('d-pais-status').textContent = p.meetsGBC ? 'Atende GBC' : 'Não atende';
+  document.getElementById('d-pais-status').style.color = p.meetsGBC ? '#5A8541' : '#A32D2D';
+  document.getElementById('d-pais-status').style.background = p.meetsGBC ? 'rgba(143,170,92,.15)' : 'rgba(163,45,45,.1)';
+  document.getElementById('d-pais-margin').textContent = (p.margin > 0 ? '+' : '') + fmtPct(p.margin) + ' vs mínimo';
+  // arc fill: percentual de nativas (max 100%)
+  const arcLen = Math.min(p.pctNat, 1) * 110;
+  document.getElementById('d-pais-arc').setAttribute('stroke-dasharray', arcLen + ' 200');
+
+  // Walkability
+  document.getElementById('d-walk-score').textContent = wk.score;
+  document.getElementById('d-walk-class').textContent = wk.classification;
+  document.getElementById('d-walk-km').textContent = fmtN(wk.kmAvoided,0);
+  document.getElementById('d-walk-money').textContent = fmtMoney(wk.moneyAvoided);
+  document.getElementById('d-walk-co2').textContent = fmtN(wk.co2Avoided,1);
+  // walkscore bar
+  document.getElementById('d-walk-bar').style.width = wk.score + '%';
+
+  // Waste
+  document.getElementById('d-res-vol').textContent = fmtN(r.volDesviado,0);
+  document.getElementById('d-res-cacambas').textContent = fmtN(r.cacambas,0);
+  document.getElementById('d-res-caminhoes').textContent = fmtN(r.caminhoes,1);
+  document.getElementById('d-res-co2').textContent = fmtN(r.co2,1);
+  document.getElementById('d-res-bar').style.width = opts.resDesv + '%';
+
+  // Thermal & Luminic (direct from inputs)
+  document.getElementById('d-th-ac').textContent = opts.thAC + '%';
+  document.getElementById('d-th-active').textContent = opts.thActive + '%';
+  document.getElementById('d-th-stab').textContent = opts.thStab + '%';
+  document.getElementById('d-th-range').textContent = '± ' + opts.thRange + '°C';
+  document.getElementById('d-lm-sup').textContent = opts.lmSup + '%';
+  document.getElementById('d-lm-int').textContent = opts.lmInt + '%';
+  document.getElementById('d-lm-min').textContent = opts.lmMin + '%';
+  // luminic bars
+  document.getElementById('d-lm-sup-bar').style.width = opts.lmSup + '%';
+  document.getElementById('d-lm-int-bar').style.width = opts.lmInt + '%';
+  document.getElementById('d-lm-min-bar').style.width = opts.lmMin + '%';
+
+  return {opts};
+}
+
+// ── PARAMETRIC CONTROLS ─────────────────────────────────
+const rUnits=document.getElementById('r-units');
+const nUnits=document.getElementById('n-units');
+const rPerFloor=document.getElementById('r-perfloor');
+const rMaxFl=document.getElementById('r-maxfl');
+const vUnits=document.getElementById('v-units');
+const vPerFloor=document.getElementById('v-perfloor');
+const vMaxFl=document.getElementById('v-maxfl');
+const cTowers=document.getElementById('c-towers');
+const cFloors=document.getElementById('c-floors');
+const cPerTower=document.getElementById('c-perTower');
+const cTotal=document.getElementById('c-total');
+
+function compute(){
+  const totalUnits=parseInt(rUnits.value);
+  const perFloor=parseInt(rPerFloor.value);
+  const maxFl=parseInt(rMaxFl.value);
+  vUnits.textContent=totalUnits;
+  vPerFloor.textContent=perFloor;
+  vMaxFl.textContent=maxFl;
+  nUnits.value=totalUnits;
+  const maxUnitsPerTower=perFloor*maxFl;
+  const numTowers=Math.max(1,Math.ceil(totalUnits/maxUnitsPerTower));
+  const unitsPerTower=Math.ceil(totalUnits/numTowers);
+  const floorsPerTower=Math.max(1,Math.ceil(unitsPerTower/perFloor));
+  const effectiveTotal=numTowers*floorsPerTower*perFloor;
+  cTowers.textContent=numTowers;
+  cFloors.textContent=floorsPerTower;
+  cPerTower.textContent=floorsPerTower*perFloor;
+  cTotal.textContent=effectiveTotal;
+  build(numTowers,floorsPerTower,perFloor);
+  updateDashboard(effectiveTotal);
+}
+
+[rUnits,rPerFloor,rMaxFl].forEach(el=>el.addEventListener('input',compute));
+nUnits.addEventListener('change',()=>{
+  let v=Math.max(4,Math.min(640,parseInt(nUnits.value)||4));
+  rUnits.value=v;compute();
+});
+
+// System toggles & inputs — all GBC inputs
+const ALL_INPUTS = [
+  'sys-solar','sys-grey','sys-water','sys-irr',
+  'i-solar-gen','i-grey-vol','i-water-area','i-water-vol','i-city',
+  'i-shower','i-toilet','i-faucet','i-kitchen','i-ppl',
+  'i-sensor','i-elevator','i-pump','i-inv','i-co','i-ac','i-heat','i-led',
+  'i-pais-area','i-pais-nat','i-pais-adap',
+  'i-walk','i-dist','i-cons',
+  'i-res-total','i-res-desv',
+  'i-th-ac','i-th-active','i-th-stab','i-th-range',
+  'i-lm-sup','i-lm-int','i-lm-min',
+  'i-tar-w','i-tar-e','i-tar-g','i-fat-co2'
+];
+ALL_INPUTS.forEach(id=>{
+  const el = document.getElementById(id);
+  if(el){
+    el.addEventListener('input', compute);
+    if(el.tagName==='SELECT') el.addEventListener('change', compute);
+  }
+});
+
+// TABS
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const target = btn.dataset.tab;
+    document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('on', b.dataset.tab===target));
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.toggle('on', c.dataset.tab===target));
+  });
+});
+
+// initial build
+compute();
 </script>
 </body>
 </html>
